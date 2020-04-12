@@ -3,9 +3,9 @@ Utilities for experimenting with LEGO SPIKE PRIME Hub
 
 Code modified from https://github.com/nutki/spike-tools
 
-Install Python 3.8.2 prior (yes, currently only that version). Enable Add to Path when installing.
+Install Python 3.8.2. Enable Add to Path when installing <= THIS IS VERY IMPORTANT.
 
-To install, just run install.bat
+To install, just run install.bat after downloadinf the whole repository.
 
 -------------
 

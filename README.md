@@ -5,7 +5,7 @@ Code modified from https://github.com/nutki/spike-tools
 
 Install Python 3.8.2. Enable Add to Path when installing <= THIS IS VERY IMPORTANT.
 
-To install, just run install.bat after downloadinf the whole repository.
+To install, just run install.bat etc. after downloading the whole repository.
 
 -------------
 

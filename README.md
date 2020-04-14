@@ -1,4 +1,4 @@
-# spike-tools
+# spikeprime-tools v0.1.0
 Utilities for experimenting with LEGO SPIKE PRIME Hub
 
 Code modified from https://github.com/nutki/spike-tools

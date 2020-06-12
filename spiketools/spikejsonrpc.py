@@ -75,7 +75,7 @@ class RPC:
     return self.send_message('get_storage_status')
 
   def start_write_program(self, name, size, slot, created, modified):
-    meta = {'created': created, 'modified': modified, 'name': name, 'type': 'python', 'project_id': '50uN1ZaRpHj2'}
+    meta = {'created': created, 'modified': modified, 'name': name }
     return self.send_message('start_write_program', {'slotid':slot, 'size': size, 'meta': meta})
 
   def write_package(self, data, transferid):

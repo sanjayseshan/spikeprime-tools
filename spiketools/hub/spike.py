@@ -1,3 +1,6 @@
+"""
+SPIKE Prime Python Classes
+"""
 class App:
     def __init__(self):
         pass
@@ -63,294 +66,6 @@ class App:
         TypeError : name is not a string or volume is not an integer.
         
         RuntimeError : The SPIKE App has been disconnected from the Hub.
-        """
-        pass
-
-class PrimeHub:
-    speaker = Speaker()
-    motion_sensor = MotionSensor()
-    left_button = Buttons("left")
-    right_button = Buttons("right")
-    light_matrix = LightMatrix()
-    status_light = StatusLight()
-    PORT_A = 'A'
-    PORT_B = 'B'
-    PORT_C = 'C'
-    PORT_D = 'D'
-    PORT_E = 'E'
-
-    def __init__(self):
-        """
-        The PrimeHub is divided into six components, each with a number of functions linked to it. To be able to use the Hub, you must initialize it.
-        """
-        pass
-
-class Buttons:
-    def __init__(self, location):
-        """
-        Accesses the PrimeHub buttons
-        """
-        pass
-    def wait_until_pressed(self):
-        """
-        Waits until the button is pressed.
-        """
-        pass
-    def wait_until_released(self):
-        """
-        Waits until the button is released.
-        """
-        pass
-    def was_pressed(self):
-        """
-        Tests to see whether the button has been pressed since the last time this method called.
-        Once this method returns True, the button must be released and pressed again before this method will return True again.
-        Returns
-        -------------
-        If the button was pressed, otherwise
-        Type : boolean
-        Values : True or False
-        """
-        pass
-    def is_pressed(self):
-        """
-        Tests whether the button is pressed.
-        Returns
-        ----------
-        True if the button is pressed, otherwise False
-        
-        Type : boolean
-        
-        Values : True or False
-        """
-        pass
-
-class ColorSensor:
-    def __init__(self, port):
-        """
-        Controls the color sensor.
-        Parameters
-        -------------
-        port : The port label the sensor is connected to.
-        
-        Type : string (text)
-        
-        Values : 'A', 'B', 'C', 'D', and 'E'
-        
-        Default : no default value
-        """
-        pass
-        def get_color(self):
-            """
-            Retrieves the detected color of a surface.
-            
-            Returns
-            -----------
-            Name of the color.
-
-            Type : string (text)
-
-            Values : 'black','violet','blue','cyan','green','yellow','red','white',None
-            
-            Errors
-            -----------
-            RuntimeError : The sensor has been disconnected from the Port.
-            """
-        pass
-    def get_ambient_light(self):
-        """
-        Retrieves the intensity of the ambient light.
-        This causes the Color Sensor to change modes, which can affect your program in unexpected ways. For example, when the Color Sensor is in ambient light mode, it cannot read colors.
-
-        Returns
-        -------------
-        The ambient light intensity.
-
-        Type : integer (positive or negative whole number, including 0)
-        
-        Values : 0 to 100 %
-        
-        Errors
-        --------------
-        RuntimeError : The sensor has been disconnected from the Port.
-        """
-        pass
-    def get_reflected_light(self):
-        """
-        Retrieves the intensity of the reflected light.
-        
-        Returns
-        ---------
-        The reflected light intensity.
-        
-        Type : integer (positive or negative whole number, including 0)
-        
-        Values : 0 to 100 %
-        
-        Errors
-        ------------
-        RuntimeError : The sensor has been disconnected from the Port.
-        """
-        pass
-    def get_rgb_intensity(self):
-        """
-        Retrieves the red, green, blue, and overall color intensity.
-        
-        Returns
-        ----------
-        Type : tuple of int
-        
-        Values : Red, green, blue, and overall intensity (0-1024)
-        
-        Errors
-        -----------
-        RuntimeError : The sensor has been disconnected from the Port.
-        """
-        pass
-    def get_red(self):
-        """
-        Retrieves the red color intensity.
-        
-        Returns
-        --------
-        Type : integer (positive or negative whole number, including 0)
-        
-        Values : 0 to 1024
-        
-        Errors
-        ----------
-        RuntimeError : The sensor has been disconnected from the Port.
-        """
-        pass
-    def get_green(self):
-        """
-        Retrieves the green color intensity.
-        
-        Returns
-        -----------
-        Type : integer (positive or negative whole number, including 0)
-        
-        Values : 0 to 1024
-        
-        Errors
-        -----------
-        RuntimeError : The sensor has been disconnected from the Port.
-        """
-        pass
-    def get_blue(self):
-        """
-        Retrieves the blue color intensity.
-        
-        Returns
-        -----------
-        Type : integer (positive or negative whole number, including 0)
-        
-        Values : 0 to 1024
-        
-        Errors
-        -----------
-        RuntimeError : The sensor has been disconnected from the Port.
-        """
-        pass
-    def wait_until_color(self, color):
-        """
-        Waits until the Color Sensor detects the specified color.
-        
-        Parameters
-        -----------
-        color : The name of the color
-        
-        Type : string (text)
-        
-        Values : 'black','violet','blue','cyan','green','yellow','red','white',None
-        
-        Default : no default value
-        
-        Errors
-        ------------
-        TypeError : color is not a string or None.
-        
-        ValueError : color is not one of the allowed values.
-        
-        RuntimeError : The sensor has been disconnected from the Port.
-        """
-        pass
-    def wait_for_new_color(self):
-        """
-        Waits until the Color Sensor detects a new color.
-        The first time this method is called, it returns immediately the detected color. After that, it waits until the Color Sensor detects a color that is different from the color that was detected the last time this method was used.
-        
-        Returns
-        -----------
-        The name of the new color
-        
-        Type : string (text)
-        
-        Values : 'black','violet','blue','cyan','green','yellow','red','white',None
-        
-        Errors
-        ----------
-        RuntimeError : The sensor has been disconnected from the Port.
-        """
-        pass
-    def light_up_all(self, brightness=100):
-        """
-        Lights up all of the lights on the Color Sensor with a specified brightness.
-        This causes the Color Sensor to change modes, which can affect your program in unexpected ways. For example, when the Color Sensor is in light up mode, it cannot read colors.
-        
-        Parameters
-        ---------
-        brightness : The desired brightness of the lights on the Color Sensor.
-        
-        Type : integer (positive or negative whole number, including 0)
-        
-        Values : 0 to 100 % (0 is off and 100 is full brightness.)
-        
-        Default : 100 %
-        
-        Errors
-        ---------- 
-        TypeError : brightness is not an integer.
-        
-        RuntimeError : The sensor has been disconnected from the Port.
-        """
-        pass
-    def light_up(self, light_1=100, light_2=100, light_3=100):
-        """
-        Sets the brightness of the individual lights on the Color Sensor.
-        This causes the Color Sensor to change modes, which can affect your program in unexpected ways. For example, when the Color Sensor is in light up mode, it cannot read colors.
-
-        Parameters
-        -------------
-        light_1 : The desired brightness of light 1.
-        
-        Type : integer (positive or negative whole number, including 0)
-        
-        Values : 0 to 100 % (0 is off and 100 is full brightness.)
-        
-        Default : 100 %
-        
-        light_2 : The desired brightness of light 2.
-        
-        Type : integer (positive or negative whole number, including 0)
-        
-        Values : 0 to 100 % (0 is off and 100 is full brightness.)
-        
-        Default : 100 %
-        
-        light_3 : The desired brightness of light 3.
-        
-        Type : integer (positive or negative whole number, including 0)
-        
-        Values : 0 to 100 % (0 is off and 100 is full brightness.)
-        
-        Default : 100 %
-        
-        Errors
-        --------
-        TypeError : light_1, light_2, or light_3 is not an integer.
-        
-        RuntimeError : The sensor has been disconnected from the Port.
         """
         pass
 
@@ -451,8 +166,8 @@ class DistanceSensor:
         
         Returns
         ----------------
-        The measured distance, or “none” if the distance cannot be measured.
-        
+        The measured distance, or "none" if the distance cannot be measured.
+
         Type : float (decimal number)
         
         Values : 0 to 200 cm
@@ -480,7 +195,7 @@ class DistanceSensor:
         
         Returns
         ------------------
-        The measured distance, or “none” if the distance cannot be measured.
+        The measured distance, or "none" if the distance cannot be measured.
         
         Type : float (decimal number)
         
@@ -510,7 +225,7 @@ class DistanceSensor:
         
         Returns
         ----------
-        The measured distance, or “none” if the distance cannot be measured.
+        The measured distance, or "none" if the distance cannot be measured.
         
         Type : integer (positive or negative whole number, including 0)
         
@@ -795,7 +510,7 @@ class MotionSensor:
         """
         Retrieves the yaw angle of the Hub.
         
-        “Yaw” is the rotation around the front-back (vertical) axis. “Pitch” the is rotation around the left-right (transverse) axis. “Roll” the is rotation around the front-back (longitudinal) axis.
+        "Yaw" is the rotation around the front-back (vertical) axis. "Pitch" the is rotation around the left-right (transverse) axis. "Roll" the is rotation around the front-back (longitudinal) axis.
         
         Returns
         -------
@@ -811,7 +526,7 @@ class MotionSensor:
         Retrieves the current orientation of the Hub.
         Returns
         -------
-        The Hub’s current orientation.
+        The Hub's current orientation.
 
         Type : string (text)
 
@@ -833,7 +548,7 @@ class MotionSensor:
     def get_roll_angle(self):
         """
         Retrieves the roll angle of the Hub.
-        “Roll” is the rotation around the front-back (longitudinal) axis. “Yaw” is the rotation around the front-back (vertical) axis. “Pitch” is the rotation around the left-right (transverse) axis.
+        "Roll" is the rotation around the front-back (longitudinal) axis. "Yaw" is the rotation around the front-back (vertical) axis. "Pitch" is the rotation around the left-right (transverse) axis.
         Returns
         -----------
         The roll angle, specified in degrees.
@@ -846,7 +561,7 @@ class MotionSensor:
     def get_pitch_angle(self):
         """
         Retrieves the pitch angle of the Hub.
-        “Pitch” is the rotation around the left-right (transverse) axis. “Roll” is the rotation around the front-back (longitudinal) axis. “Yaw” is the rotation around the front-back (vertical) axis.
+        "Pitch" is the rotation around the left-right (transverse) axis. "Roll" is the rotation around the front-back (longitudinal) axis. "Yaw" is the rotation around the front-back (vertical) axis.
         Returns
         -----------
         The pitch angle, specified in degrees.
@@ -895,10 +610,10 @@ class MotionSensor:
     def wait_for_new_orientation(self):
         """
         Waits until the orientation of the Hub changes.
-        The first time this method is called, it will immediately return the current value. After that, calling this method will block the program until the Hub’s orientation has changed since the previous time this method was called.
+        The first time this method is called, it will immediately return the current value. After that, calling this method will block the program until the Hub's orientation has changed since the previous time this method was called.
         Returns
         ----------
-        The Hub’s new orientation.
+        The Hub's new orientation.
         Type : string (text)
         Values : 'front', 'back', 'up', 'down', 'left side', 'right side'
         """
@@ -943,7 +658,7 @@ class Motor:
         
         Default : no default value
         
-        speed : The motor’s speed.
+        speed : The motor's speed.
         
         Type : integer (positive or negative whole number, including 0)
         
@@ -1004,7 +719,7 @@ class Motor:
         
         Default : no default value
         
-        speed : The motor’s speed
+        speed : The motor's speed
         
         Type : integer (positive or negative whole number, including 0)
         
@@ -1033,7 +748,7 @@ class Motor:
         
         Default : no default value
         
-        speed : The motor’s speed
+        speed : The motor's speed
         
         Type : integer (positive or negative whole number, including 0)
         
@@ -1062,7 +777,7 @@ class Motor:
     
         Default : no default value
     
-        speed : The motor’s speed.
+        speed : The motor's speed.
     
         Type : integer (positive or negative whole number, including 0)
     
@@ -1084,7 +799,7 @@ class Motor:
         
         Parameters
         ----------
-        speed : The motor’s speed.
+        speed : The motor's speed.
         
         Type : integer (positive or negative whole number, including 0)
         
@@ -1187,7 +902,7 @@ class Motor:
 
         Returns
         ---------
-        The default motor’s speed.
+        The default motor's speed.
 
         Type : integer (positive or negative whole number, including 0)
 
@@ -1302,7 +1017,7 @@ class Motor:
     def set_stall_detection(self, stop_when_stalled):
         """
         Turns stall detection on or off.
-        Stall detection senses when a motor has been blocked and can’t move. If stall detection has been enabled and a motor is blocked, the motor will be powered off after two seconds and the current motor command will be interrupted. If stall detection has been disabled, the motor will keep trying to run and programs will “get stuck” until the motor is no longer blocked.
+        Stall detection senses when a motor has been blocked and can't move. If stall detection has been enabled and a motor is blocked, the motor will be powered off after two seconds and the current motor command will be interrupted. If stall detection has been disabled, the motor will keep trying to run and programs will "get stuck" until the motor is no longer blocked.
         Stall detection is enabled by default.
         
         Parameters
@@ -1921,3 +1636,292 @@ def greater_than(a, b):
     Values : True if a > b, otherwise False.
     """
     pass
+
+
+class Buttons:
+    def __init__(self, location):
+        """
+        Accesses the PrimeHub buttons
+        """
+        pass
+    def wait_until_pressed(self):
+        """
+        Waits until the button is pressed.
+        """
+        pass
+    def wait_until_released(self):
+        """
+        Waits until the button is released.
+        """
+        pass
+    def was_pressed(self):
+        """
+        Tests to see whether the button has been pressed since the last time this method called.
+        Once this method returns True, the button must be released and pressed again before this method will return True again.
+        Returns
+        -------------
+        If the button was pressed, otherwise
+        Type : boolean
+        Values : True or False
+        """
+        pass
+    def is_pressed(self):
+        """
+        Tests whether the button is pressed.
+        Returns
+        ----------
+        True if the button is pressed, otherwise False
+        
+        Type : boolean
+        
+        Values : True or False
+        """
+        pass
+
+class ColorSensor:
+    def __init__(self, port):
+        """
+        Controls the color sensor.
+        Parameters
+        -------------
+        port : The port label the sensor is connected to.
+        
+        Type : string (text)
+        
+        Values : 'A', 'B', 'C', 'D', and 'E'
+        
+        Default : no default value
+        """
+        pass
+        def get_color(self):
+            """
+            Retrieves the detected color of a surface.
+            
+            Returns
+            -----------
+            Name of the color.
+
+            Type : string (text)
+
+            Values : 'black','violet','blue','cyan','green','yellow','red','white',None
+            
+            Errors
+            -----------
+            RuntimeError : The sensor has been disconnected from the Port.
+            """
+        pass
+    def get_ambient_light(self):
+        """
+        Retrieves the intensity of the ambient light.
+        This causes the Color Sensor to change modes, which can affect your program in unexpected ways. For example, when the Color Sensor is in ambient light mode, it cannot read colors.
+
+        Returns
+        -------------
+        The ambient light intensity.
+
+        Type : integer (positive or negative whole number, including 0)
+        
+        Values : 0 to 100 %
+        
+        Errors
+        --------------
+        RuntimeError : The sensor has been disconnected from the Port.
+        """
+        pass
+    def get_reflected_light(self):
+        """
+        Retrieves the intensity of the reflected light.
+        
+        Returns
+        ---------
+        The reflected light intensity.
+        
+        Type : integer (positive or negative whole number, including 0)
+        
+        Values : 0 to 100 %
+        
+        Errors
+        ------------
+        RuntimeError : The sensor has been disconnected from the Port.
+        """
+        pass
+    def get_rgb_intensity(self):
+        """
+        Retrieves the red, green, blue, and overall color intensity.
+        
+        Returns
+        ----------
+        Type : tuple of int
+        
+        Values : Red, green, blue, and overall intensity (0-1024)
+        
+        Errors
+        -----------
+        RuntimeError : The sensor has been disconnected from the Port.
+        """
+        pass
+    def get_red(self):
+        """
+        Retrieves the red color intensity.
+        
+        Returns
+        --------
+        Type : integer (positive or negative whole number, including 0)
+        
+        Values : 0 to 1024
+        
+        Errors
+        ----------
+        RuntimeError : The sensor has been disconnected from the Port.
+        """
+        pass
+    def get_green(self):
+        """
+        Retrieves the green color intensity.
+        
+        Returns
+        -----------
+        Type : integer (positive or negative whole number, including 0)
+        
+        Values : 0 to 1024
+        
+        Errors
+        -----------
+        RuntimeError : The sensor has been disconnected from the Port.
+        """
+        pass
+    def get_blue(self):
+        """
+        Retrieves the blue color intensity.
+        
+        Returns
+        -----------
+        Type : integer (positive or negative whole number, including 0)
+        
+        Values : 0 to 1024
+        
+        Errors
+        -----------
+        RuntimeError : The sensor has been disconnected from the Port.
+        """
+        pass
+    def wait_until_color(self, color):
+        """
+        Waits until the Color Sensor detects the specified color.
+        
+        Parameters
+        -----------
+        color : The name of the color
+        
+        Type : string (text)
+        
+        Values : 'black','violet','blue','cyan','green','yellow','red','white',None
+        
+        Default : no default value
+        
+        Errors
+        ------------
+        TypeError : color is not a string or None.
+        
+        ValueError : color is not one of the allowed values.
+        
+        RuntimeError : The sensor has been disconnected from the Port.
+        """
+        pass
+    def wait_for_new_color(self):
+        """
+        Waits until the Color Sensor detects a new color.
+        The first time this method is called, it returns immediately the detected color. After that, it waits until the Color Sensor detects a color that is different from the color that was detected the last time this method was used.
+        
+        Returns
+        -----------
+        The name of the new color
+        
+        Type : string (text)
+        
+        Values : 'black','violet','blue','cyan','green','yellow','red','white',None
+        
+        Errors
+        ----------
+        RuntimeError : The sensor has been disconnected from the Port.
+        """
+        pass
+    def light_up_all(self, brightness=100):
+        """
+        Lights up all of the lights on the Color Sensor with a specified brightness.
+        This causes the Color Sensor to change modes, which can affect your program in unexpected ways. For example, when the Color Sensor is in light up mode, it cannot read colors.
+        
+        Parameters
+        ---------
+        brightness : The desired brightness of the lights on the Color Sensor.
+        
+        Type : integer (positive or negative whole number, including 0)
+        
+        Values : 0 to 100 % (0 is off and 100 is full brightness.)
+        
+        Default : 100 %
+        
+        Errors
+        ---------- 
+        TypeError : brightness is not an integer.
+        
+        RuntimeError : The sensor has been disconnected from the Port.
+        """
+        pass
+    def light_up(self, light_1=100, light_2=100, light_3=100):
+        """
+        Sets the brightness of the individual lights on the Color Sensor.
+        This causes the Color Sensor to change modes, which can affect your program in unexpected ways. For example, when the Color Sensor is in light up mode, it cannot read colors.
+
+        Parameters
+        -------------
+        light_1 : The desired brightness of light 1.
+        
+        Type : integer (positive or negative whole number, including 0)
+        
+        Values : 0 to 100 % (0 is off and 100 is full brightness.)
+        
+        Default : 100 %
+        
+        light_2 : The desired brightness of light 2.
+        
+        Type : integer (positive or negative whole number, including 0)
+        
+        Values : 0 to 100 % (0 is off and 100 is full brightness.)
+        
+        Default : 100 %
+        
+        light_3 : The desired brightness of light 3.
+        
+        Type : integer (positive or negative whole number, including 0)
+        
+        Values : 0 to 100 % (0 is off and 100 is full brightness.)
+        
+        Default : 100 %
+        
+        Errors
+        --------
+        TypeError : light_1, light_2, or light_3 is not an integer.
+        
+        RuntimeError : The sensor has been disconnected from the Port.
+        """
+        pass
+
+class PrimeHub:
+    speaker = Speaker()
+    motion_sensor = MotionSensor()
+    left_button = Buttons("left")
+    right_button = Buttons("right")
+    light_matrix = LightMatrix()
+    status_light = StatusLight()
+    PORT_A = 'A'
+    PORT_B = 'B'
+    PORT_C = 'C'
+    PORT_D = 'D'
+    PORT_E = 'E'
+
+    def __init__(self):
+        """
+        The PrimeHub is divided into six components, each with a number of functions linked to it. To be able to use the Hub, you must initialize it.
+        """
+        pass

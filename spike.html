@@ -1,0 +1,1749 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spike</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>spike</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/sanjay/spike.py">/home/sanjay/spike.py</a></font></td></tr></table>
+    <p><tt>SPIKE&nbsp;Prime&nbsp;Python&nbsp;Classes</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="spike.html#App">App</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spike.html#Buttons">Buttons</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spike.html#ColorSensor">ColorSensor</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spike.html#DistanceSensor">DistanceSensor</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spike.html#ForceSensor">ForceSensor</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spike.html#LightMatrix">LightMatrix</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spike.html#MotionSensor">MotionSensor</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spike.html#Motor">Motor</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spike.html#MotorPair">MotorPair</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spike.html#PrimeHub">PrimeHub</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spike.html#Speaker">Speaker</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spike.html#StatusLight">StatusLight</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="App">class <strong>App</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="App-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="App-play_sound"><strong>play_sound</strong></a>(self, name, volume<font color="#909090">=100</font>)</dt><dd><tt>Plays&nbsp;a&nbsp;sound&nbsp;from&nbsp;the&nbsp;device&nbsp;(tablet&nbsp;or&nbsp;computer).<br>
+&nbsp;<br>
+The&nbsp;program&nbsp;will&nbsp;not&nbsp;continue&nbsp;until&nbsp;the&nbsp;sound&nbsp;has&nbsp;finished&nbsp;playing.<br>
+&nbsp;<br>
+If&nbsp;no&nbsp;sound&nbsp;is&nbsp;found&nbsp;with&nbsp;the&nbsp;given&nbsp;name&nbsp;is&nbsp;found,&nbsp;nothing&nbsp;will&nbsp;happen.<br>
+&nbsp;<br>
+Parameters<br>
+-------------<br>
+name&nbsp;:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;sound&nbsp;to&nbsp;play.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;Alert,&nbsp;Applause1,&nbsp;Applause2,&nbsp;Applause3,&nbsp;Baa,&nbsp;Bang1,&nbsp;Bang2,&nbsp;BasketballBounce,&nbsp;BigBoing,&nbsp;Bird,&nbsp;Bite,&nbsp;BoatHorn1,&nbsp;BoatHorn2,&nbsp;Bonk,&nbsp;BoomCloud,&nbsp;BoopBingBop,&nbsp;BowlingStrike,&nbsp;Burp1,&nbsp;Burp2,&nbsp;Burp3,&nbsp;CarAccelerate1,&nbsp;CarAccelerating2,&nbsp;CarHorn,&nbsp;CarIdle,&nbsp;CarReverse,&nbsp;CarSkid1,&nbsp;CarSkid2,&nbsp;CarVroom,&nbsp;CatAngry,&nbsp;CatHappy,&nbsp;CatHiss,&nbsp;CatMeow1,&nbsp;CatMeow2,&nbsp;CatMeow3,&nbsp;CatPurring,&nbsp;CatWhining,&nbsp;Chatter,&nbsp;Chirp,&nbsp;Clang,&nbsp;ClockTicking,&nbsp;ClownHonk1,&nbsp;ClownHonk2,&nbsp;ClownHonk3,&nbsp;Coin,&nbsp;Collect,&nbsp;Connect,&nbsp;Crank,&nbsp;CrazyLaugh,&nbsp;Croak,&nbsp;CrowdGasp,&nbsp;Crunch,&nbsp;Cuckoo,&nbsp;CymbalCrash,&nbsp;Disconnect,&nbsp;DogBark1,&nbsp;DogBark2,&nbsp;DogBark3,&nbsp;DogWhining1,&nbsp;DogWhining2,&nbsp;Doorbell1,&nbsp;Doorbell2,&nbsp;Doorbell3,&nbsp;DoorClosing,&nbsp;DoorCreek1,&nbsp;DoorCreek2,&nbsp;DoorHandle,&nbsp;DoorKnock,&nbsp;DoorSlam1,&nbsp;DoorSlam2,&nbsp;DrumRoll,&nbsp;DunDunDunnn,&nbsp;EmotionalPiano,&nbsp;Fart1,&nbsp;Fart2,&nbsp;Fart3,&nbsp;Footsteps,&nbsp;Gallop,&nbsp;GlassBreaking,&nbsp;Glug,&nbsp;GoalCheer,&nbsp;Gong,&nbsp;Growl,&nbsp;Grunt,&nbsp;HammerHit,&nbsp;HeadShake,&nbsp;HighWhoosh,&nbsp;Jump,&nbsp;JungleFrogs,&nbsp;Laser1,&nbsp;Laser2,&nbsp;Laser3,&nbsp;LaughingBaby1,&nbsp;LaughingBaby2,&nbsp;LaughingBoy,&nbsp;LaughingCrowd1,&nbsp;LaughingCrowd2,&nbsp;LaughingGirl,&nbsp;LaughingMale,&nbsp;Lose,&nbsp;LowBoing,&nbsp;LowSqueak,&nbsp;LowWhoosh,&nbsp;MagicSpell,&nbsp;MaleJump1,&nbsp;MaleJump2,&nbsp;Moo,&nbsp;OceanWave,&nbsp;Oops,&nbsp;OrchestraTuning,&nbsp;PartyBlower,&nbsp;Pew,&nbsp;PingPongHit,&nbsp;PlaneFlyingBy,&nbsp;PlaneMotorRunning,&nbsp;PlaneStarting,&nbsp;Pluck,&nbsp;PoliceSiren1,&nbsp;PoliceSiren2,&nbsp;PoliceSiren3,&nbsp;Punch,&nbsp;Rain,&nbsp;Ricochet,&nbsp;Rimshot,&nbsp;RingTone,&nbsp;Rip,&nbsp;Robot1,&nbsp;Robot2,&nbsp;Robot3,&nbsp;RocketExplosionRumble,&nbsp;Rooster,&nbsp;ScramblingFeet,&nbsp;Screech,&nbsp;Seagulls,&nbsp;ServiceAnnouncement,&nbsp;SewingMachine,&nbsp;ShipBell,&nbsp;SirenWhistle,&nbsp;Skid,&nbsp;SlideWhistle1,&nbsp;SlideWhistle2,&nbsp;SneakerSqueak,&nbsp;Snoring,&nbsp;Snort,&nbsp;SpaceAmbience,&nbsp;SpaceFlyby,&nbsp;SpaceNoise,&nbsp;Splash,&nbsp;SportWhistle1,&nbsp;SportWhistle2,&nbsp;SqueakyToy,&nbsp;SquishPop,&nbsp;SuctionCup,&nbsp;Tada,&nbsp;TelephoneRing2,&nbsp;TelephoneRing,&nbsp;Teleport2,&nbsp;Teleport3,&nbsp;Teleport,&nbsp;TennisHit,&nbsp;ThunderStorm,&nbsp;TolietFlush,&nbsp;ToyHonk,&nbsp;ToyZing,&nbsp;Traffic,&nbsp;TrainBreaks,&nbsp;TrainHorn1,&nbsp;TrainHorn2,&nbsp;TrainHorn3,&nbsp;TrainOnTracks,&nbsp;TrainSignal1,&nbsp;TrainSignal2,&nbsp;TrainStart,&nbsp;TrainWhistle,&nbsp;Triumph,&nbsp;TropicalBirds,&nbsp;Wand,&nbsp;WaterDrop,&nbsp;WhistleThump,&nbsp;Whiz1,&nbsp;Whiz2,&nbsp;WindowBreaks,&nbsp;Win,&nbsp;Wobble,&nbsp;WoodTap,&nbsp;Zip<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+volume&nbsp;:&nbsp;The&nbsp;volume&nbsp;at&nbsp;which&nbsp;the&nbsp;sound&nbsp;will&nbsp;be&nbsp;played.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100&nbsp;%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100%<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;name&nbsp;is&nbsp;not&nbsp;a&nbsp;string&nbsp;or&nbsp;volume&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;SPIKE&nbsp;<a href="#App">App</a>&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Hub.</tt></dd></dl>
+
+<dl><dt><a name="App-start_sound"><strong>start_sound</strong></a>(self, name, volume)</dt><dd><tt>Starts&nbsp;playing&nbsp;a&nbsp;sound&nbsp;from&nbsp;your&nbsp;device&nbsp;(tablet&nbsp;or&nbsp;computer).<br>
+The&nbsp;program&nbsp;will&nbsp;not&nbsp;wait&nbsp;for&nbsp;the&nbsp;sound&nbsp;to&nbsp;finish&nbsp;playing&nbsp;before&nbsp;proceeding&nbsp;to&nbsp;the&nbsp;next&nbsp;command.<br>
+If&nbsp;no&nbsp;sound&nbsp;with&nbsp;the&nbsp;given&nbsp;name&nbsp;is&nbsp;found,&nbsp;nothing&nbsp;will&nbsp;happen.<br>
+&nbsp;<br>
+Parameters<br>
+-------------<br>
+name&nbsp;:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;sound&nbsp;to&nbsp;play.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;Alert,&nbsp;Applause1,&nbsp;Applause2,&nbsp;Applause3,&nbsp;Baa,&nbsp;Bang1,&nbsp;Bang2,&nbsp;BasketballBounce,&nbsp;BigBoing,&nbsp;Bird,&nbsp;Bite,&nbsp;BoatHorn1,&nbsp;BoatHorn2,&nbsp;Bonk,&nbsp;BoomCloud,&nbsp;BoopBingBop,&nbsp;BowlingStrike,&nbsp;Burp1,&nbsp;Burp2,&nbsp;Burp3,&nbsp;CarAccelerate1,&nbsp;CarAccelerating2,&nbsp;CarHorn,&nbsp;CarIdle,&nbsp;CarReverse,&nbsp;CarSkid1,&nbsp;CarSkid2,&nbsp;CarVroom,&nbsp;CatAngry,&nbsp;CatHappy,&nbsp;CatHiss,&nbsp;CatMeow1,&nbsp;CatMeow2,&nbsp;CatMeow3,&nbsp;CatPurring,&nbsp;CatWhining,&nbsp;Chatter,&nbsp;Chirp,&nbsp;Clang,&nbsp;ClockTicking,&nbsp;ClownHonk1,&nbsp;ClownHonk2,&nbsp;ClownHonk3,&nbsp;Coin,&nbsp;Collect,&nbsp;Connect,&nbsp;Crank,&nbsp;CrazyLaugh,&nbsp;Croak,&nbsp;CrowdGasp,&nbsp;Crunch,&nbsp;Cuckoo,&nbsp;CymbalCrash,&nbsp;Disconnect,&nbsp;DogBark1,&nbsp;DogBark2,&nbsp;DogBark3,&nbsp;DogWhining1,&nbsp;DogWhining2,&nbsp;Doorbell1,&nbsp;Doorbell2,&nbsp;Doorbell3,&nbsp;DoorClosing,&nbsp;DoorCreek1,&nbsp;DoorCreek2,&nbsp;DoorHandle,&nbsp;DoorKnock,&nbsp;DoorSlam1,&nbsp;DoorSlam2,&nbsp;DrumRoll,&nbsp;DunDunDunnn,&nbsp;EmotionalPiano,&nbsp;Fart1,&nbsp;Fart2,&nbsp;Fart3,&nbsp;Footsteps,&nbsp;Gallop,&nbsp;GlassBreaking,&nbsp;Glug,&nbsp;GoalCheer,&nbsp;Gong,&nbsp;Growl,&nbsp;Grunt,&nbsp;HammerHit,&nbsp;HeadShake,&nbsp;HighWhoosh,&nbsp;Jump,&nbsp;JungleFrogs,&nbsp;Laser1,&nbsp;Laser2,&nbsp;Laser3,&nbsp;LaughingBaby1,&nbsp;LaughingBaby2,&nbsp;LaughingBoy,&nbsp;LaughingCrowd1,&nbsp;LaughingCrowd2,&nbsp;LaughingGirl,&nbsp;LaughingMale,&nbsp;Lose,&nbsp;LowBoing,&nbsp;LowSqueak,&nbsp;LowWhoosh,&nbsp;MagicSpell,&nbsp;MaleJump1,&nbsp;MaleJump2,&nbsp;Moo,&nbsp;OceanWave,&nbsp;Oops,&nbsp;OrchestraTuning,&nbsp;PartyBlower,&nbsp;Pew,&nbsp;PingPongHit,&nbsp;PlaingFlyingBy,&nbsp;PlaneMotorRunning,&nbsp;PlaneStarting,&nbsp;Pluck,&nbsp;PoliceSiren1,&nbsp;PoliceSiren2,&nbsp;PoliceSiren3,&nbsp;Punch,&nbsp;Rain,&nbsp;Ricochet,&nbsp;Rimshot,&nbsp;RingTone,&nbsp;Rip,&nbsp;Robot1,&nbsp;Robot2,&nbsp;Robot3,&nbsp;RocketExplosionRumble,&nbsp;Rooster,&nbsp;ScramblingFeet,&nbsp;Screech,&nbsp;Seagulls,&nbsp;ServiceAnnouncement,&nbsp;SewingMachine,&nbsp;ShipBell,&nbsp;SirenWhistle,&nbsp;Skid,&nbsp;SlideWhistle1,&nbsp;SlideWhistle2,&nbsp;SneakerSqueak,&nbsp;Snoring,&nbsp;Snort,&nbsp;SpaceAmbience,&nbsp;SpaceFlyby,&nbsp;SpaceNoise,&nbsp;Splash,&nbsp;SportWhistle1,&nbsp;SportWhistle2,&nbsp;SqueakyToy,&nbsp;SquishPop,&nbsp;SuctionCup,&nbsp;Tada,&nbsp;TelephoneRing2,&nbsp;TelephoneRing,&nbsp;Teleport2,&nbsp;Teleport3,&nbsp;Teleport,&nbsp;TennisHit,&nbsp;ThunderStorm,&nbsp;TolietFlush,&nbsp;ToyHonk,&nbsp;ToyZing,&nbsp;Traffic,&nbsp;TrainBreaks,&nbsp;TrainHorn1,&nbsp;TrainHorn2,&nbsp;TrainHorn3,&nbsp;TrainOnTracks,&nbsp;TrainSignal1,&nbsp;TrainSignal2,&nbsp;TrainStart,&nbsp;TrainWhistle,&nbsp;Triumph,&nbsp;TropicalBirds,&nbsp;Wand,&nbsp;WaterDrop,&nbsp;WhistleThump,&nbsp;Whiz1,&nbsp;Whiz2,&nbsp;WindowBreaks,&nbsp;Win,&nbsp;Wobble,&nbsp;WoodTap,&nbsp;Zip<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+volume&nbsp;:&nbsp;The&nbsp;volume&nbsp;at&nbsp;which&nbsp;the&nbsp;sound&nbsp;will&nbsp;be&nbsp;played.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100&nbsp;%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100%<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;name&nbsp;is&nbsp;not&nbsp;a&nbsp;string&nbsp;or&nbsp;volume&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;SPIKE&nbsp;<a href="#App">App</a>&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Hub.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Buttons">class <strong>Buttons</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Buttons-__init__"><strong>__init__</strong></a>(self, location)</dt><dd><tt>Accesses&nbsp;the&nbsp;<a href="#PrimeHub">PrimeHub</a>&nbsp;buttons</tt></dd></dl>
+
+<dl><dt><a name="Buttons-is_pressed"><strong>is_pressed</strong></a>(self)</dt><dd><tt>Tests&nbsp;whether&nbsp;the&nbsp;button&nbsp;is&nbsp;pressed.<br>
+Returns<br>
+----------<br>
+True&nbsp;if&nbsp;the&nbsp;button&nbsp;is&nbsp;pressed,&nbsp;otherwise&nbsp;False<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;boolean<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False</tt></dd></dl>
+
+<dl><dt><a name="Buttons-wait_until_pressed"><strong>wait_until_pressed</strong></a>(self)</dt><dd><tt>Waits&nbsp;until&nbsp;the&nbsp;button&nbsp;is&nbsp;pressed.</tt></dd></dl>
+
+<dl><dt><a name="Buttons-wait_until_released"><strong>wait_until_released</strong></a>(self)</dt><dd><tt>Waits&nbsp;until&nbsp;the&nbsp;button&nbsp;is&nbsp;released.</tt></dd></dl>
+
+<dl><dt><a name="Buttons-was_pressed"><strong>was_pressed</strong></a>(self)</dt><dd><tt>Tests&nbsp;to&nbsp;see&nbsp;whether&nbsp;the&nbsp;button&nbsp;has&nbsp;been&nbsp;pressed&nbsp;since&nbsp;the&nbsp;last&nbsp;time&nbsp;this&nbsp;method&nbsp;called.<br>
+Once&nbsp;this&nbsp;method&nbsp;returns&nbsp;True,&nbsp;the&nbsp;button&nbsp;must&nbsp;be&nbsp;released&nbsp;and&nbsp;pressed&nbsp;again&nbsp;before&nbsp;this&nbsp;method&nbsp;will&nbsp;return&nbsp;True&nbsp;again.<br>
+Returns<br>
+-------------<br>
+If&nbsp;the&nbsp;button&nbsp;was&nbsp;pressed,&nbsp;otherwise<br>
+Type&nbsp;:&nbsp;boolean<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ColorSensor">class <strong>ColorSensor</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ColorSensor-__init__"><strong>__init__</strong></a>(self, port)</dt><dd><tt>Controls&nbsp;the&nbsp;color&nbsp;sensor.<br>
+Parameters<br>
+-------------<br>
+port&nbsp;:&nbsp;The&nbsp;port&nbsp;label&nbsp;the&nbsp;sensor&nbsp;is&nbsp;connected&nbsp;to.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'A',&nbsp;'B',&nbsp;'C',&nbsp;'D',&nbsp;and&nbsp;'E'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ColorSensor-get_ambient_light"><strong>get_ambient_light</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;intensity&nbsp;of&nbsp;the&nbsp;ambient&nbsp;light.<br>
+This&nbsp;causes&nbsp;the&nbsp;Color&nbsp;Sensor&nbsp;to&nbsp;change&nbsp;modes,&nbsp;which&nbsp;can&nbsp;affect&nbsp;your&nbsp;program&nbsp;in&nbsp;unexpected&nbsp;ways.&nbsp;For&nbsp;example,&nbsp;when&nbsp;the&nbsp;Color&nbsp;Sensor&nbsp;is&nbsp;in&nbsp;ambient&nbsp;light&nbsp;mode,&nbsp;it&nbsp;cannot&nbsp;read&nbsp;colors.<br>
+&nbsp;<br>
+Returns<br>
+-------------<br>
+The&nbsp;ambient&nbsp;light&nbsp;intensity.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100&nbsp;%<br>
+&nbsp;<br>
+Errors<br>
+--------------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="ColorSensor-get_blue"><strong>get_blue</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;blue&nbsp;color&nbsp;intensity.<br>
+&nbsp;<br>
+Returns<br>
+-----------<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;1024<br>
+&nbsp;<br>
+Errors<br>
+-----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="ColorSensor-get_green"><strong>get_green</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;green&nbsp;color&nbsp;intensity.<br>
+&nbsp;<br>
+Returns<br>
+-----------<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;1024<br>
+&nbsp;<br>
+Errors<br>
+-----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="ColorSensor-get_red"><strong>get_red</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;red&nbsp;color&nbsp;intensity.<br>
+&nbsp;<br>
+Returns<br>
+--------<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;1024<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="ColorSensor-get_reflected_light"><strong>get_reflected_light</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;intensity&nbsp;of&nbsp;the&nbsp;reflected&nbsp;light.<br>
+&nbsp;<br>
+Returns<br>
+---------<br>
+The&nbsp;reflected&nbsp;light&nbsp;intensity.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100&nbsp;%<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="ColorSensor-get_rgb_intensity"><strong>get_rgb_intensity</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;red,&nbsp;green,&nbsp;blue,&nbsp;and&nbsp;overall&nbsp;color&nbsp;intensity.<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+Type&nbsp;:&nbsp;tuple&nbsp;of&nbsp;int<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;Red,&nbsp;green,&nbsp;blue,&nbsp;and&nbsp;overall&nbsp;intensity&nbsp;(0-1024)<br>
+&nbsp;<br>
+Errors<br>
+-----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="ColorSensor-light_up"><strong>light_up</strong></a>(self, light_1<font color="#909090">=100</font>, light_2<font color="#909090">=100</font>, light_3<font color="#909090">=100</font>)</dt><dd><tt>Sets&nbsp;the&nbsp;brightness&nbsp;of&nbsp;the&nbsp;individual&nbsp;lights&nbsp;on&nbsp;the&nbsp;Color&nbsp;Sensor.<br>
+This&nbsp;causes&nbsp;the&nbsp;Color&nbsp;Sensor&nbsp;to&nbsp;change&nbsp;modes,&nbsp;which&nbsp;can&nbsp;affect&nbsp;your&nbsp;program&nbsp;in&nbsp;unexpected&nbsp;ways.&nbsp;For&nbsp;example,&nbsp;when&nbsp;the&nbsp;Color&nbsp;Sensor&nbsp;is&nbsp;in&nbsp;light&nbsp;up&nbsp;mode,&nbsp;it&nbsp;cannot&nbsp;read&nbsp;colors.<br>
+&nbsp;<br>
+Parameters<br>
+-------------<br>
+light_1&nbsp;:&nbsp;The&nbsp;desired&nbsp;brightness&nbsp;of&nbsp;light&nbsp;1.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100&nbsp;%&nbsp;(0&nbsp;is&nbsp;off&nbsp;and&nbsp;100&nbsp;is&nbsp;full&nbsp;brightness.)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100&nbsp;%<br>
+&nbsp;<br>
+light_2&nbsp;:&nbsp;The&nbsp;desired&nbsp;brightness&nbsp;of&nbsp;light&nbsp;2.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100&nbsp;%&nbsp;(0&nbsp;is&nbsp;off&nbsp;and&nbsp;100&nbsp;is&nbsp;full&nbsp;brightness.)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100&nbsp;%<br>
+&nbsp;<br>
+light_3&nbsp;:&nbsp;The&nbsp;desired&nbsp;brightness&nbsp;of&nbsp;light&nbsp;3.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100&nbsp;%&nbsp;(0&nbsp;is&nbsp;off&nbsp;and&nbsp;100&nbsp;is&nbsp;full&nbsp;brightness.)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100&nbsp;%<br>
+&nbsp;<br>
+Errors<br>
+--------<br>
+TypeError&nbsp;:&nbsp;light_1,&nbsp;light_2,&nbsp;or&nbsp;light_3&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="ColorSensor-light_up_all"><strong>light_up_all</strong></a>(self, brightness<font color="#909090">=100</font>)</dt><dd><tt>Lights&nbsp;up&nbsp;all&nbsp;of&nbsp;the&nbsp;lights&nbsp;on&nbsp;the&nbsp;Color&nbsp;Sensor&nbsp;with&nbsp;a&nbsp;specified&nbsp;brightness.<br>
+This&nbsp;causes&nbsp;the&nbsp;Color&nbsp;Sensor&nbsp;to&nbsp;change&nbsp;modes,&nbsp;which&nbsp;can&nbsp;affect&nbsp;your&nbsp;program&nbsp;in&nbsp;unexpected&nbsp;ways.&nbsp;For&nbsp;example,&nbsp;when&nbsp;the&nbsp;Color&nbsp;Sensor&nbsp;is&nbsp;in&nbsp;light&nbsp;up&nbsp;mode,&nbsp;it&nbsp;cannot&nbsp;read&nbsp;colors.<br>
+&nbsp;<br>
+Parameters<br>
+---------<br>
+brightness&nbsp;:&nbsp;The&nbsp;desired&nbsp;brightness&nbsp;of&nbsp;the&nbsp;lights&nbsp;on&nbsp;the&nbsp;Color&nbsp;Sensor.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100&nbsp;%&nbsp;(0&nbsp;is&nbsp;off&nbsp;and&nbsp;100&nbsp;is&nbsp;full&nbsp;brightness.)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100&nbsp;%<br>
+&nbsp;<br>
+Errors<br>
+----------&nbsp;<br>
+TypeError&nbsp;:&nbsp;brightness&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="ColorSensor-wait_for_new_color"><strong>wait_for_new_color</strong></a>(self)</dt><dd><tt>Waits&nbsp;until&nbsp;the&nbsp;Color&nbsp;Sensor&nbsp;detects&nbsp;a&nbsp;new&nbsp;color.<br>
+The&nbsp;first&nbsp;time&nbsp;this&nbsp;method&nbsp;is&nbsp;called,&nbsp;it&nbsp;returns&nbsp;immediately&nbsp;the&nbsp;detected&nbsp;color.&nbsp;After&nbsp;that,&nbsp;it&nbsp;waits&nbsp;until&nbsp;the&nbsp;Color&nbsp;Sensor&nbsp;detects&nbsp;a&nbsp;color&nbsp;that&nbsp;is&nbsp;different&nbsp;from&nbsp;the&nbsp;color&nbsp;that&nbsp;was&nbsp;detected&nbsp;the&nbsp;last&nbsp;time&nbsp;this&nbsp;method&nbsp;was&nbsp;used.<br>
+&nbsp;<br>
+Returns<br>
+-----------<br>
+The&nbsp;name&nbsp;of&nbsp;the&nbsp;new&nbsp;color<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'black','violet','blue','cyan','green','yellow','red','white',None<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="ColorSensor-wait_until_color"><strong>wait_until_color</strong></a>(self, color)</dt><dd><tt>Waits&nbsp;until&nbsp;the&nbsp;Color&nbsp;Sensor&nbsp;detects&nbsp;the&nbsp;specified&nbsp;color.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+color&nbsp;:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;color<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'black','violet','blue','cyan','green','yellow','red','white',None<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;color&nbsp;is&nbsp;not&nbsp;a&nbsp;string&nbsp;or&nbsp;None.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;color&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DistanceSensor">class <strong>DistanceSensor</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="DistanceSensor-__init__"><strong>__init__</strong></a>(self, port)</dt><dd><tt>Allows&nbsp;access&nbsp;to&nbsp;the&nbsp;connected&nbsp;distance&nbsp;sensor.<br>
+Parameters<br>
+-------------<br>
+port&nbsp;:&nbsp;The&nbsp;port&nbsp;label&nbsp;the&nbsp;sensor&nbsp;is&nbsp;connected&nbsp;to<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'A',&nbsp;'B',&nbsp;'C',&nbsp;'D',&nbsp;and&nbsp;'E'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="DistanceSensor-get_distance_cm"><strong>get_distance_cm</strong></a>(self, short_range<font color="#909090">=False</font>)</dt><dd><tt>Retrieves&nbsp;the&nbsp;measured&nbsp;distance&nbsp;in&nbsp;centimeters.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+short_range&nbsp;:&nbsp;Whether&nbsp;to&nbsp;use&nbsp;or&nbsp;not&nbsp;the&nbsp;short&nbsp;range&nbsp;mode.&nbsp;The&nbsp;short&nbsp;range&nbsp;mode&nbsp;increases&nbsp;accuracy&nbsp;but&nbsp;it&nbsp;can&nbsp;only&nbsp;detect&nbsp;nearby&nbsp;objects.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;boolean<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;False<br>
+&nbsp;<br>
+Returns<br>
+----------------<br>
+The&nbsp;measured&nbsp;distance,&nbsp;or&nbsp;"none"&nbsp;if&nbsp;the&nbsp;distance&nbsp;cannot&nbsp;be&nbsp;measured.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;200&nbsp;cm<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;short_range&nbsp;is&nbsp;not&nbsp;a&nbsp;boolean.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="DistanceSensor-get_distance_inches"><strong>get_distance_inches</strong></a>(self, short_range<font color="#909090">=False</font>)</dt><dd><tt>Gets&nbsp;the&nbsp;measured&nbsp;distance&nbsp;in&nbsp;inches.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+short_range&nbsp;:&nbsp;Whether&nbsp;or&nbsp;not&nbsp;to&nbsp;use&nbsp;short&nbsp;range&nbsp;mode.&nbsp;Short&nbsp;range&nbsp;mode&nbsp;increases&nbsp;accuracy&nbsp;but&nbsp;it&nbsp;can&nbsp;only&nbsp;detect&nbsp;nearby&nbsp;objects.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;boolean<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;False<br>
+&nbsp;<br>
+Returns<br>
+------------------<br>
+The&nbsp;measured&nbsp;distance,&nbsp;or&nbsp;"none"&nbsp;if&nbsp;the&nbsp;distance&nbsp;cannot&nbsp;be&nbsp;measured.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;value&nbsp;between&nbsp;0&nbsp;and&nbsp;79<br>
+&nbsp;<br>
+Errors<br>
+-------------<br>
+TypeError&nbsp;:&nbsp;short_range&nbsp;is&nbsp;not&nbsp;a&nbsp;boolean.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="DistanceSensor-get_distance_percentage"><strong>get_distance_percentage</strong></a>(self, short_range<font color="#909090">=False</font>)</dt><dd><tt>Retrieves&nbsp;the&nbsp;measured&nbsp;distance&nbsp;in&nbsp;percent.<br>
+&nbsp;<br>
+Parameters<br>
+---------<br>
+short_range&nbsp;:&nbsp;Whether&nbsp;or&nbsp;not&nbsp;to&nbsp;use&nbsp;short&nbsp;range&nbsp;mode.&nbsp;Short&nbsp;range&nbsp;mode&nbsp;increases&nbsp;accuracy&nbsp;but&nbsp;it&nbsp;can&nbsp;only&nbsp;detect&nbsp;nearby&nbsp;objects.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;boolean<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;False<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+The&nbsp;measured&nbsp;distance,&nbsp;or&nbsp;"none"&nbsp;if&nbsp;the&nbsp;distance&nbsp;cannot&nbsp;be&nbsp;measured.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;value&nbsp;between&nbsp;0&nbsp;and&nbsp;100<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+TypeError&nbsp;:&nbsp;short_range&nbsp;is&nbsp;not&nbsp;a&nbsp;boolean.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="DistanceSensor-light_up"><strong>light_up</strong></a>(self, right_top<font color="#909090">=100</font>, left_top<font color="#909090">=100</font>, right_bottom<font color="#909090">=100</font>, left_bottom<font color="#909090">=100</font>)</dt><dd><tt>Sets&nbsp;the&nbsp;brightness&nbsp;of&nbsp;the&nbsp;individual&nbsp;lights&nbsp;on&nbsp;the&nbsp;Distance&nbsp;Sensor.<br>
+&nbsp;<br>
+Parameters<br>
+-------------<br>
+right_top&nbsp;:&nbsp;The&nbsp;brightness&nbsp;of&nbsp;the&nbsp;light&nbsp;above&nbsp;the&nbsp;right&nbsp;part&nbsp;of&nbsp;the&nbsp;Distance&nbsp;Sensor.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100%&nbsp;(0&nbsp;is&nbsp;off&nbsp;and&nbsp;100&nbsp;is&nbsp;full&nbsp;brightness.)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100<br>
+&nbsp;<br>
+left_top&nbsp;:&nbsp;The&nbsp;brightness&nbsp;of&nbsp;the&nbsp;light&nbsp;above&nbsp;the&nbsp;left&nbsp;part&nbsp;of&nbsp;the&nbsp;Distance&nbsp;Sensor.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100%&nbsp;(0&nbsp;is&nbsp;off&nbsp;and&nbsp;100&nbsp;is&nbsp;full&nbsp;brightness.)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100<br>
+&nbsp;<br>
+right_bottom&nbsp;:&nbsp;The&nbsp;brightness&nbsp;of&nbsp;the&nbsp;light&nbsp;below&nbsp;the&nbsp;right&nbsp;part&nbsp;of&nbsp;the&nbsp;Distance&nbsp;Sensor.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100%&nbsp;(0&nbsp;is&nbsp;off&nbsp;and&nbsp;100&nbsp;is&nbsp;full&nbsp;brightness.)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100<br>
+&nbsp;<br>
+left_bottom&nbsp;:&nbsp;The&nbsp;brightness&nbsp;of&nbsp;the&nbsp;light&nbsp;below&nbsp;the&nbsp;left&nbsp;part&nbsp;of&nbsp;the&nbsp;Distance&nbsp;Sensor.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100%&nbsp;(0&nbsp;is&nbsp;off&nbsp;and&nbsp;100&nbsp;is&nbsp;full&nbsp;brightness.)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100<br>
+&nbsp;<br>
+Errors<br>
+---------------<br>
+TypeError&nbsp;:&nbsp;right_top,&nbsp;left_top,&nbsp;right_bottom&nbsp;or&nbsp;left_bottom&nbsp;is&nbsp;not&nbsp;a&nbsp;number.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="DistanceSensor-light_up_all"><strong>light_up_all</strong></a>(self, brightness<font color="#909090">=100</font>)</dt><dd><tt>Lights&nbsp;up&nbsp;all&nbsp;of&nbsp;the&nbsp;lights&nbsp;on&nbsp;the&nbsp;Distance&nbsp;Sensor&nbsp;with&nbsp;the&nbsp;specified&nbsp;brightness.<br>
+&nbsp;<br>
+Parameters<br>
+---------<br>
+brightness&nbsp;:&nbsp;The&nbsp;specified&nbsp;brightness&nbsp;of&nbsp;all&nbsp;the&nbsp;lights.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100&nbsp;%&nbsp;(0&nbsp;is&nbsp;off&nbsp;and&nbsp;100&nbsp;is&nbsp;full&nbsp;brightness.)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100&nbsp;%<br>
+&nbsp;<br>
+Errors<br>
+----------&nbsp;<br>
+TypeError&nbsp;:&nbsp;brightness&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="DistanceSensor-wait_for_distance_closer_than"><strong>wait_for_distance_closer_than</strong></a>(self, distance, unit<font color="#909090">='cm'</font>, short_range<font color="#909090">=False</font>)</dt><dd><tt>Waits&nbsp;until&nbsp;the&nbsp;measured&nbsp;distance&nbsp;is&nbsp;less&nbsp;than&nbsp;distance.<br>
+&nbsp;<br>
+Parameters<br>
+--------------<br>
+distance&nbsp;:&nbsp;The&nbsp;target&nbsp;distance&nbsp;to&nbsp;detect,&nbsp;from&nbsp;the&nbsp;sensor&nbsp;to&nbsp;an&nbsp;object.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;value<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+unit&nbsp;:&nbsp;Unit&nbsp;of&nbsp;measurement&nbsp;of&nbsp;the&nbsp;distance.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'cm','in','%'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;cm<br>
+&nbsp;<br>
+short_range&nbsp;:&nbsp;Whether&nbsp;or&nbsp;not&nbsp;to&nbsp;use&nbsp;short&nbsp;range&nbsp;mode.&nbsp;Short&nbsp;range&nbsp;mode&nbsp;increases&nbsp;accuracy&nbsp;but&nbsp;it&nbsp;can&nbsp;only&nbsp;detect&nbsp;nearby&nbsp;objects.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;boolean<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;False<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;distance&nbsp;is&nbsp;not&nbsp;a&nbsp;number&nbsp;or&nbsp;unit&nbsp;is&nbsp;not&nbsp;a&nbsp;string&nbsp;or&nbsp;short_range&nbsp;is&nbsp;not&nbsp;a&nbsp;boolean.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;unit&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values.&nbsp;short_range&nbsp;is&nbsp;not&nbsp;a&nbsp;boolean.<br>
+&nbsp;<br>
+RuntimeError:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="DistanceSensor-wait_for_distance_farther_than"><strong>wait_for_distance_farther_than</strong></a>(self, distance, unit<font color="#909090">='cm'</font>, short_range<font color="#909090">=False</font>)</dt><dd><tt>Waits&nbsp;until&nbsp;the&nbsp;measured&nbsp;distance&nbsp;is&nbsp;greater&nbsp;than&nbsp;distance.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+distance&nbsp;:&nbsp;The&nbsp;target&nbsp;distance&nbsp;to&nbsp;detect,&nbsp;from&nbsp;the&nbsp;sensor&nbsp;to&nbsp;an&nbsp;object.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;value<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+unit&nbsp;:&nbsp;Unit&nbsp;of&nbsp;measurement&nbsp;of&nbsp;the&nbsp;distance.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'cm','in','%'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;cm<br>
+&nbsp;<br>
+short_range&nbsp;:&nbsp;Whether&nbsp;or&nbsp;not&nbsp;to&nbsp;use&nbsp;short&nbsp;range&nbsp;mode.&nbsp;Short&nbsp;range&nbsp;mode&nbsp;increases&nbsp;accuracy&nbsp;but&nbsp;it&nbsp;can&nbsp;only&nbsp;detect&nbsp;nearby&nbsp;objects.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;boolean<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;False<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+TypeError&nbsp;:&nbsp;distance&nbsp;is&nbsp;not&nbsp;a&nbsp;number&nbsp;or&nbsp;unit&nbsp;is&nbsp;not&nbsp;a&nbsp;string&nbsp;or&nbsp;short_range&nbsp;is&nbsp;not&nbsp;a&nbsp;boolean.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;unit&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ForceSensor">class <strong>ForceSensor</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ForceSensor-__init__"><strong>__init__</strong></a>(self, port)</dt><dd><tt>Allows&nbsp;access&nbsp;to&nbsp;the&nbsp;connected&nbsp;force&nbsp;sensor.<br>
+Parameters<br>
+-------------<br>
+port&nbsp;:&nbsp;The&nbsp;port&nbsp;label&nbsp;the&nbsp;sensor&nbsp;is&nbsp;connected&nbsp;to<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'A',&nbsp;'B',&nbsp;'C',&nbsp;'D',&nbsp;and&nbsp;'E'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ForceSensor-get_force_newton"><strong>get_force_newton</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;measured&nbsp;force,&nbsp;in&nbsp;newtons.<br>
+&nbsp;<br>
+Returns<br>
+-----------<br>
+The&nbsp;measured&nbsp;force&nbsp;in&nbsp;newtons.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;between&nbsp;0&nbsp;and&nbsp;10<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;Force&nbsp;Sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;port.</tt></dd></dl>
+
+<dl><dt><a name="ForceSensor-get_force_percentage"><strong>get_force_percentage</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;measured&nbsp;force&nbsp;as&nbsp;a&nbsp;percentage&nbsp;of&nbsp;the&nbsp;maximum&nbsp;force.<br>
+&nbsp;<br>
+Returns<br>
+------------<br>
+The&nbsp;measured&nbsp;force,&nbsp;in&nbsp;percentage.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;between&nbsp;0&nbsp;-&nbsp;100%.<br>
+&nbsp;<br>
+Errors<br>
+-----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;Force&nbsp;Sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;port.</tt></dd></dl>
+
+<dl><dt><a name="ForceSensor-is_pressed"><strong>is_pressed</strong></a>(self)</dt><dd><tt>Tests&nbsp;whether&nbsp;the&nbsp;button&nbsp;on&nbsp;the&nbsp;sensor&nbsp;is&nbsp;pressed.<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+True&nbsp;if&nbsp;the&nbsp;button&nbsp;is&nbsp;pressed.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;boolean<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False<br>
+&nbsp;<br>
+Errors<br>
+-----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;Force&nbsp;Sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;port.</tt></dd></dl>
+
+<dl><dt><a name="ForceSensor-wait_until_pressed"><strong>wait_until_pressed</strong></a>(self)</dt><dd><tt>Waits&nbsp;until&nbsp;the&nbsp;Force&nbsp;Sensor&nbsp;is&nbsp;pressed.<br>
+Errors<br>
+----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;port.</tt></dd></dl>
+
+<dl><dt><a name="ForceSensor-wait_until_released"><strong>wait_until_released</strong></a>(self)</dt><dd><tt>Waits&nbsp;until&nbsp;the&nbsp;Force&nbsp;Sensor&nbsp;is&nbsp;released.<br>
+Errors<br>
+---------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;sensor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LightMatrix">class <strong>LightMatrix</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="LightMatrix-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Controls&nbsp;the&nbsp;light&nbsp;matrix&nbsp;on&nbsp;the&nbsp;Spike&nbsp;Hub</tt></dd></dl>
+
+<dl><dt><a name="LightMatrix-off"><strong>off</strong></a>(self)</dt><dd><tt>Turns&nbsp;off&nbsp;all&nbsp;the&nbsp;pixels&nbsp;on&nbsp;the&nbsp;Light&nbsp;Matrix.</tt></dd></dl>
+
+<dl><dt><a name="LightMatrix-set_pixel"><strong>set_pixel</strong></a>(self, x, y, brightness<font color="#909090">=100</font>)</dt><dd><tt>Sets&nbsp;the&nbsp;brightness&nbsp;of&nbsp;one&nbsp;pixel&nbsp;(one&nbsp;of&nbsp;the&nbsp;25&nbsp;LED)&nbsp;on&nbsp;the&nbsp;Light&nbsp;Matrix.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+x&nbsp;:&nbsp;Pixel&nbsp;position,&nbsp;counting&nbsp;from&nbsp;the&nbsp;left.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;1&nbsp;to&nbsp;5<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+y&nbsp;:&nbsp;Pixel&nbsp;position,&nbsp;counting&nbsp;from&nbsp;the&nbsp;top.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;1&nbsp;to&nbsp;5<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+brightness&nbsp;:&nbsp;Brightness&nbsp;of&nbsp;the&nbsp;pixel<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100<br>
+&nbsp;<br>
+Errors<br>
+--------------<br>
+TypeError&nbsp;:&nbsp;x,&nbsp;y&nbsp;or&nbsp;brightness&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;x,&nbsp;y&nbsp;is&nbsp;not&nbsp;within&nbsp;the&nbsp;allowed&nbsp;range&nbsp;of&nbsp;0-4.</tt></dd></dl>
+
+<dl><dt><a name="LightMatrix-show_image"><strong>show_image</strong></a>(self, image, brightness<font color="#909090">=100</font>)</dt><dd><tt>Shows&nbsp;an&nbsp;image&nbsp;on&nbsp;the&nbsp;Light&nbsp;Matrix.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+image&nbsp;:&nbsp;Name&nbsp;of&nbsp;the&nbsp;image.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;ANGRY,&nbsp;ARROW_E,&nbsp;ARROW_N,&nbsp;ARROW_NE,&nbsp;ARROW_NW,&nbsp;ARROW_S,&nbsp;ARROW_SE,&nbsp;ARROW_SW,&nbsp;ARROW_W,&nbsp;ASLEEP,&nbsp;BUTTERFLY,&nbsp;CHESSBOARD,&nbsp;CLOCK1,&nbsp;CLOCK10,&nbsp;CLOCK11,&nbsp;CLOCK12,&nbsp;CLOCK2,&nbsp;CLOCK3,&nbsp;CLOCK4,&nbsp;CLOCK5,&nbsp;CLOCK6,&nbsp;CLOCK7,&nbsp;CLOCK8,&nbsp;CLOCK9,&nbsp;CONFUSED,&nbsp;COW,&nbsp;DIAMOND,&nbsp;DIAMOND_SMALL,&nbsp;DUCK,&nbsp;FABULOUS,&nbsp;GHOST,&nbsp;GIRAFFE,&nbsp;GO_RIGHT,&nbsp;GO_LEFT,&nbsp;GO_IP,&nbsp;GO_DOWN,&nbsp;HAPPY,&nbsp;HEART,&nbsp;HEART_SMALL,&nbsp;HOUSE,&nbsp;MEH,&nbsp;MUSIC_CROTCHET,&nbsp;MUSIC_QUAVER,&nbsp;MUSIC_QUAVERS,&nbsp;NO,&nbsp;PACMAN,&nbsp;PITCHFORK,&nbsp;RABBIT,&nbsp;ROLLERSKATE,&nbsp;SAD,&nbsp;SILLY,&nbsp;SKULL,&nbsp;SMILE,&nbsp;SNAKE,&nbsp;SQUARE,&nbsp;SQUARE_SMALL,&nbsp;STICKFIGURE,&nbsp;SURPRISED,&nbsp;SWORD,&nbsp;TARGET,&nbsp;TORTOISE,&nbsp;TRIANGLE,&nbsp;TRIANGLE_LEFT,&nbsp;TSHIRT,&nbsp;UMBRELLA,&nbsp;XMAS,&nbsp;YES<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+brightness&nbsp;:&nbsp;Brightness&nbsp;of&nbsp;the&nbsp;image<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100<br>
+&nbsp;<br>
+Errors<br>
+-------------------<br>
+TypeError&nbsp;:&nbsp;image&nbsp;is&nbsp;not&nbsp;a&nbsp;string&nbsp;or&nbsp;brightness&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;image&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values.</tt></dd></dl>
+
+<dl><dt><a name="LightMatrix-write"><strong>write</strong></a>(self, text)</dt><dd><tt>Writes&nbsp;text&nbsp;on&nbsp;the&nbsp;Light&nbsp;Matrix,&nbsp;one&nbsp;letter&nbsp;at&nbsp;a&nbsp;time,&nbsp;scrolling&nbsp;from&nbsp;right&nbsp;to&nbsp;left.<br>
+Your&nbsp;program&nbsp;will&nbsp;not&nbsp;continue&nbsp;until&nbsp;all&nbsp;of&nbsp;the&nbsp;letters&nbsp;have&nbsp;been&nbsp;shown.<br>
+&nbsp;<br>
+Parameters<br>
+---------<br>
+text&nbsp;:&nbsp;Text&nbsp;to&nbsp;write.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;text<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MotionSensor">class <strong>MotionSensor</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="MotionSensor-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Senses&nbsp;angle&nbsp;and&nbsp;motion&nbsp;changes&nbsp;and&nbsp;it&nbsp;built&nbsp;into&nbsp;the&nbsp;Hub.</tt></dd></dl>
+
+<dl><dt><a name="MotionSensor-get_gesture"><strong>get_gesture</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;most&nbsp;recently-detected&nbsp;gesture.<br>
+Returns<br>
+---------<br>
+The&nbsp;gesture.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'shaken','tapped','doubletapped','falling'</tt></dd></dl>
+
+<dl><dt><a name="MotionSensor-get_orientation"><strong>get_orientation</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;current&nbsp;orientation&nbsp;of&nbsp;the&nbsp;Hub.<br>
+Returns<br>
+-------<br>
+The&nbsp;Hub's&nbsp;current&nbsp;orientation.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'front','back','up','down','leftside','rightside'</tt></dd></dl>
+
+<dl><dt><a name="MotionSensor-get_pitch_angle"><strong>get_pitch_angle</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;pitch&nbsp;angle&nbsp;of&nbsp;the&nbsp;Hub.<br>
+"Pitch"&nbsp;is&nbsp;the&nbsp;rotation&nbsp;around&nbsp;the&nbsp;left-right&nbsp;(transverse)&nbsp;axis.&nbsp;"Roll"&nbsp;is&nbsp;the&nbsp;rotation&nbsp;around&nbsp;the&nbsp;front-back&nbsp;(longitudinal)&nbsp;axis.&nbsp;"Yaw"&nbsp;is&nbsp;the&nbsp;rotation&nbsp;around&nbsp;the&nbsp;front-back&nbsp;(vertical)&nbsp;axis.<br>
+Returns<br>
+-----------<br>
+The&nbsp;pitch&nbsp;angle,&nbsp;specified&nbsp;in&nbsp;degrees.<br>
+Type&nbsp;:&nbsp;Integer&nbsp;(Positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+Values&nbsp;:&nbsp;-180&nbsp;to&nbsp;180&nbsp;BUG:&nbsp;only&nbsp;reads&nbsp;-90&nbsp;to&nbsp;90</tt></dd></dl>
+
+<dl><dt><a name="MotionSensor-get_roll_angle"><strong>get_roll_angle</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;roll&nbsp;angle&nbsp;of&nbsp;the&nbsp;Hub.<br>
+"Roll"&nbsp;is&nbsp;the&nbsp;rotation&nbsp;around&nbsp;the&nbsp;front-back&nbsp;(longitudinal)&nbsp;axis.&nbsp;"Yaw"&nbsp;is&nbsp;the&nbsp;rotation&nbsp;around&nbsp;the&nbsp;front-back&nbsp;(vertical)&nbsp;axis.&nbsp;"Pitch"&nbsp;is&nbsp;the&nbsp;rotation&nbsp;around&nbsp;the&nbsp;left-right&nbsp;(transverse)&nbsp;axis.<br>
+Returns<br>
+-----------<br>
+The&nbsp;roll&nbsp;angle,&nbsp;specified&nbsp;in&nbsp;degrees.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;Integer&nbsp;(Positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-180&nbsp;to&nbsp;180&nbsp;BUG:&nbsp;currently&nbsp;returns&nbsp;-179&nbsp;to&nbsp;179</tt></dd></dl>
+
+<dl><dt><a name="MotionSensor-get_yaw_angle"><strong>get_yaw_angle</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;yaw&nbsp;angle&nbsp;of&nbsp;the&nbsp;Hub.<br>
+&nbsp;<br>
+"Yaw"&nbsp;is&nbsp;the&nbsp;rotation&nbsp;around&nbsp;the&nbsp;front-back&nbsp;(vertical)&nbsp;axis.&nbsp;"Pitch"&nbsp;the&nbsp;is&nbsp;rotation&nbsp;around&nbsp;the&nbsp;left-right&nbsp;(transverse)&nbsp;axis.&nbsp;"Roll"&nbsp;the&nbsp;is&nbsp;rotation&nbsp;around&nbsp;the&nbsp;front-back&nbsp;(longitudinal)&nbsp;axis.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+The&nbsp;yaw&nbsp;angle,&nbsp;specified&nbsp;in&nbsp;degrees.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;Integer&nbsp;(Positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-180&nbsp;to&nbsp;180&nbsp;BUG:&nbsp;in&nbsp;1.2&nbsp;the&nbsp;values&nbsp;are&nbsp;-179&nbsp;to&nbsp;179</tt></dd></dl>
+
+<dl><dt><a name="MotionSensor-reset_yaw_angle"><strong>reset_yaw_angle</strong></a>(self)</dt><dd><tt>Sets&nbsp;the&nbsp;yaw&nbsp;angle&nbsp;to&nbsp;0.</tt></dd></dl>
+
+<dl><dt><a name="MotionSensor-wait_for_new_gesture"><strong>wait_for_new_gesture</strong></a>(self)</dt><dd><tt>Waits&nbsp;until&nbsp;a&nbsp;new&nbsp;gesture&nbsp;happens.<br>
+Returns<br>
+--------------<br>
+The&nbsp;new&nbsp;gesture.<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+Values&nbsp;:&nbsp;'shaken','tapped','doubletapped','falling'</tt></dd></dl>
+
+<dl><dt><a name="MotionSensor-wait_for_new_orientation"><strong>wait_for_new_orientation</strong></a>(self)</dt><dd><tt>Waits&nbsp;until&nbsp;the&nbsp;orientation&nbsp;of&nbsp;the&nbsp;Hub&nbsp;changes.<br>
+The&nbsp;first&nbsp;time&nbsp;this&nbsp;method&nbsp;is&nbsp;called,&nbsp;it&nbsp;will&nbsp;immediately&nbsp;return&nbsp;the&nbsp;current&nbsp;value.&nbsp;After&nbsp;that,&nbsp;calling&nbsp;this&nbsp;method&nbsp;will&nbsp;block&nbsp;the&nbsp;program&nbsp;until&nbsp;the&nbsp;Hub's&nbsp;orientation&nbsp;has&nbsp;changed&nbsp;since&nbsp;the&nbsp;previous&nbsp;time&nbsp;this&nbsp;method&nbsp;was&nbsp;called.<br>
+Returns<br>
+----------<br>
+The&nbsp;Hub's&nbsp;new&nbsp;orientation.<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+Values&nbsp;:&nbsp;'front',&nbsp;'back',&nbsp;'up',&nbsp;'down',&nbsp;'left&nbsp;side',&nbsp;'right&nbsp;side'</tt></dd></dl>
+
+<dl><dt><a name="MotionSensor-was_gesture"><strong>was_gesture</strong></a>(self, gesture)</dt><dd><tt>Tests&nbsp;whether&nbsp;a&nbsp;gesture&nbsp;has&nbsp;occurred&nbsp;since&nbsp;the&nbsp;last&nbsp;time&nbsp;<a href="#MotionSensor-was_gesture">was_gesture</a>()&nbsp;was&nbsp;used&nbsp;or&nbsp;since&nbsp;the&nbsp;beginning&nbsp;of&nbsp;the&nbsp;program&nbsp;(for&nbsp;the&nbsp;first&nbsp;use).<br>
+Parameters<br>
+------------<br>
+gesture&nbsp;:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;gesture.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'shaken','tapped','doubletapped','falling','None'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;gesture&nbsp;is&nbsp;not&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;gesture&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values.<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+True&nbsp;if&nbsp;gesture&nbsp;has&nbsp;occurred&nbsp;since&nbsp;the&nbsp;last&nbsp;time&nbsp;<a href="#MotionSensor-was_gesture">was_gesture</a>()&nbsp;was&nbsp;called,&nbsp;otherwise&nbsp;False.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;boolean&nbsp;<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Motor">class <strong>Motor</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Motor-__init__"><strong>__init__</strong></a>(self, port)</dt><dd><tt>Controls&nbsp;a&nbsp;single&nbsp;motor<br>
+Parameters<br>
+-------------<br>
+port&nbsp;:&nbsp;The&nbsp;port&nbsp;label&nbsp;the&nbsp;motor&nbsp;is&nbsp;connected&nbsp;to.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'A',&nbsp;'B',&nbsp;'C',&nbsp;'D',&nbsp;and&nbsp;'E'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Motor-get_default_speed"><strong>get_default_speed</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;current&nbsp;default&nbsp;motor&nbsp;speed.<br>
+&nbsp;<br>
+Returns<br>
+---------<br>
+The&nbsp;default&nbsp;motor's&nbsp;speed.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100%&nbsp;to&nbsp;100%.<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-get_degrees_counted"><strong>get_degrees_counted</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;degrees&nbsp;counted&nbsp;by&nbsp;the&nbsp;motor.<br>
+&nbsp;<br>
+Returns<br>
+-----------<br>
+The&nbsp;number&nbsp;of&nbsp;degrees&nbsp;counted.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;number<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-get_position"><strong>get_position</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;position&nbsp;of&nbsp;the&nbsp;motor.&nbsp;This&nbsp;is&nbsp;the&nbsp;clockwise&nbsp;angle&nbsp;between&nbsp;the&nbsp;moving&nbsp;marker&nbsp;and&nbsp;the&nbsp;zero-point&nbsp;marker&nbsp;on&nbsp;the&nbsp;motor.<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+The&nbsp;position&nbsp;of&nbsp;the&nbsp;motor<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;359&nbsp;degrees<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-get_speed"><strong>get_speed</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;speed&nbsp;of&nbsp;the&nbsp;motor.<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+The&nbsp;current&nbsp;speed&nbsp;of&nbsp;the&nbsp;motor<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100%&nbsp;to&nbsp;100%<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-run_for_degrees"><strong>run_for_degrees</strong></a>(self, degrees, speed<font color="#909090">=None</font>)</dt><dd><tt>Runs&nbsp;the&nbsp;motor&nbsp;for&nbsp;a&nbsp;given&nbsp;number&nbsp;of&nbsp;degrees.<br>
+&nbsp;<br>
+Parameters<br>
+-------------<br>
+degrees&nbsp;:&nbsp;The&nbsp;number&nbsp;of&nbsp;degrees&nbsp;the&nbsp;motor&nbsp;should&nbsp;run.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;number<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+speed&nbsp;:&nbsp;The&nbsp;motor's&nbsp;speed<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100%&nbsp;to&nbsp;100%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;if&nbsp;no&nbsp;value&nbsp;is&nbsp;specified,&nbsp;it&nbsp;will&nbsp;use&nbsp;the&nbsp;default&nbsp;speed&nbsp;set&nbsp;by&nbsp;<a href="#Motor-set_default_speed">set_default_speed</a>().<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+TypeError&nbsp;:&nbsp;degrees&nbsp;or&nbsp;speed&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-run_for_rotations"><strong>run_for_rotations</strong></a>(self, rotations, speed<font color="#909090">=None</font>)</dt><dd><tt>Runs&nbsp;the&nbsp;motor&nbsp;for&nbsp;a&nbsp;specified&nbsp;number&nbsp;of&nbsp;rotations.<br>
+&nbsp;<br>
+Parameters<br>
+-------------<br>
+rotations&nbsp;:&nbsp;The&nbsp;number&nbsp;of&nbsp;rotations&nbsp;the&nbsp;motor&nbsp;should&nbsp;run.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;number<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+speed&nbsp;:&nbsp;The&nbsp;motor's&nbsp;speed<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100%&nbsp;to&nbsp;100%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;if&nbsp;no&nbsp;value&nbsp;is&nbsp;specified,&nbsp;it&nbsp;will&nbsp;use&nbsp;the&nbsp;default&nbsp;speed&nbsp;set&nbsp;by&nbsp;<a href="#Motor-set_default_speed">set_default_speed</a>().<br>
+&nbsp;<br>
+Errors<br>
+-------------<br>
+TypeError&nbsp;:&nbsp;rotations&nbsp;is&nbsp;not&nbsp;a&nbsp;number&nbsp;or&nbsp;speed&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-run_for_seconds"><strong>run_for_seconds</strong></a>(self, seconds, speed<font color="#909090">=None</font>)</dt><dd><tt>Runs&nbsp;the&nbsp;motor&nbsp;for&nbsp;a&nbsp;specified&nbsp;number&nbsp;of&nbsp;seconds.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+seconds&nbsp;:&nbsp;The&nbsp;number&nbsp;of&nbsp;seconds&nbsp;for&nbsp;which&nbsp;the&nbsp;motor&nbsp;should&nbsp;run.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;number<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+speed&nbsp;:&nbsp;The&nbsp;motor's&nbsp;speed.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100%&nbsp;to&nbsp;100%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;if&nbsp;no&nbsp;value&nbsp;is&nbsp;specified,&nbsp;it&nbsp;will&nbsp;use&nbsp;the&nbsp;default&nbsp;speed&nbsp;set&nbsp;by&nbsp;<a href="#Motor-set_default_speed">set_default_speed</a>().<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+TypeError&nbsp;:&nbsp;seconds&nbsp;is&nbsp;not&nbsp;a&nbsp;number&nbsp;or&nbsp;speed&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-run_to_degrees_counted"><strong>run_to_degrees_counted</strong></a>(self, degrees, speed<font color="#909090">=None</font>)</dt><dd><tt>Runs&nbsp;the&nbsp;motor&nbsp;to&nbsp;until&nbsp;degrees&nbsp;counted&nbsp;is&nbsp;equal&nbsp;to&nbsp;the&nbsp;value&nbsp;specified&nbsp;by&nbsp;the&nbsp;degrees&nbsp;parameter.<br>
+The&nbsp;sign&nbsp;of&nbsp;the&nbsp;speed&nbsp;will&nbsp;be&nbsp;ignored&nbsp;and&nbsp;the&nbsp;motor&nbsp;will&nbsp;always&nbsp;travel&nbsp;in&nbsp;the&nbsp;direction&nbsp;required&nbsp;to&nbsp;reach&nbsp;degrees.&nbsp;If&nbsp;speed&nbsp;is&nbsp;greater&nbsp;than&nbsp;100,&nbsp;it&nbsp;will&nbsp;be&nbsp;limited&nbsp;to&nbsp;100.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+degrees&nbsp;:&nbsp;The&nbsp;target&nbsp;degrees&nbsp;counted.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;number<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+speed&nbsp;:&nbsp;The&nbsp;desired&nbsp;speed..<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100%&nbsp;(positive&nbsp;values&nbsp;only)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;if&nbsp;no&nbsp;value&nbsp;is&nbsp;specified,&nbsp;it&nbsp;will&nbsp;use&nbsp;the&nbsp;default&nbsp;speed&nbsp;set&nbsp;by&nbsp;<a href="#Motor-set_default_speed">set_default_speed</a>().<br>
+&nbsp;<br>
+Errors<br>
+-----------<br>
+TypeError&nbsp;:&nbsp;degrees&nbsp;or&nbsp;speed&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-run_to_position"><strong>run_to_position</strong></a>(self, degrees, direction<font color="#909090">='shortest path'</font>, speed<font color="#909090">=None</font>)</dt><dd><tt>Runs&nbsp;the&nbsp;motor&nbsp;to&nbsp;an&nbsp;absolute&nbsp;position.<br>
+The&nbsp;sign&nbsp;of&nbsp;the&nbsp;speed&nbsp;will&nbsp;be&nbsp;ignored&nbsp;(absolute&nbsp;value)&nbsp;and&nbsp;the&nbsp;motor&nbsp;will&nbsp;always&nbsp;travel&nbsp;in&nbsp;the&nbsp;direction&nbsp;specified&nbsp;by&nbsp;direction&nbsp;parameter.&nbsp;If&nbsp;speed&nbsp;is&nbsp;greater&nbsp;than&nbsp;100,&nbsp;it&nbsp;will&nbsp;be&nbsp;limited&nbsp;to&nbsp;100.<br>
+&nbsp;<br>
+Parameters<br>
+------------<br>
+degrees&nbsp;:&nbsp;The&nbsp;target&nbsp;position.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;359<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+direction&nbsp;:&nbsp;The&nbsp;direction&nbsp;to&nbsp;use&nbsp;to&nbsp;reach&nbsp;the&nbsp;target&nbsp;position.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;shortest&nbsp;path'&nbsp;could&nbsp;run&nbsp;in&nbsp;either&nbsp;direction&nbsp;depending&nbsp;on&nbsp;the&nbsp;shortest&nbsp;distance&nbsp;to&nbsp;the&nbsp;target.&nbsp;-&nbsp;'clockwise'&nbsp;will&nbsp;make&nbsp;the&nbsp;motor&nbsp;run&nbsp;clockwise&nbsp;until&nbsp;it&nbsp;reaches&nbsp;the&nbsp;target&nbsp;position.&nbsp;-&nbsp;'counterclockwise'&nbsp;will&nbsp;make&nbsp;the&nbsp;motor&nbsp;run&nbsp;counterclockwise&nbsp;until&nbsp;it&nbsp;reaches&nbsp;the&nbsp;target&nbsp;position.<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+speed&nbsp;:&nbsp;The&nbsp;motor's&nbsp;speed.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;if&nbsp;no&nbsp;value&nbsp;is&nbsp;specified,&nbsp;it&nbsp;will&nbsp;use&nbsp;the&nbsp;default&nbsp;speed&nbsp;set&nbsp;by&nbsp;<a href="#Motor-set_default_speed">set_default_speed</a>().<br>
+&nbsp;<br>
+Errors<br>
+-----------------<br>
+TypeError&nbsp;:&nbsp;degrees&nbsp;or&nbsp;speed&nbsp;is&nbsp;not&nbsp;an&nbsp;integer&nbsp;or&nbsp;direction&nbsp;is&nbsp;not&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;direction&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values&nbsp;or&nbsp;degrees&nbsp;is&nbsp;not&nbsp;within&nbsp;the&nbsp;range&nbsp;of&nbsp;0-359&nbsp;(both&nbsp;inclusive).<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-set_default_speed"><strong>set_default_speed</strong></a>(self, default_speed)</dt><dd><tt>Sets&nbsp;the&nbsp;default&nbsp;motor&nbsp;speed.&nbsp;This&nbsp;speed&nbsp;will&nbsp;be&nbsp;used&nbsp;when&nbsp;you&nbsp;omit&nbsp;the&nbsp;speed&nbsp;argument&nbsp;in&nbsp;one&nbsp;of&nbsp;the&nbsp;other&nbsp;methods,&nbsp;such&nbsp;as&nbsp;run_for_degrees.<br>
+Setting&nbsp;the&nbsp;default&nbsp;speed&nbsp;does&nbsp;not&nbsp;affect&nbsp;any&nbsp;motors&nbsp;that&nbsp;are&nbsp;currently&nbsp;running.<br>
+It&nbsp;will&nbsp;only&nbsp;have&nbsp;an&nbsp;effect&nbsp;when&nbsp;another&nbsp;motor&nbsp;method&nbsp;is&nbsp;called&nbsp;after&nbsp;this&nbsp;method.<br>
+If&nbsp;the&nbsp;value&nbsp;of&nbsp;default_speed&nbsp;is&nbsp;outside&nbsp;of&nbsp;the&nbsp;allowed&nbsp;range,&nbsp;the&nbsp;default&nbsp;speed&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;-100&nbsp;or&nbsp;100&nbsp;depending&nbsp;on&nbsp;whether&nbsp;the&nbsp;value&nbsp;was&nbsp;negative&nbsp;or&nbsp;positive.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+default_speed&nbsp;:&nbsp;The&nbsp;default&nbsp;speed&nbsp;value.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100%&nbsp;to&nbsp;100%.<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;default_speed&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.</tt></dd></dl>
+
+<dl><dt><a name="Motor-set_degrees_counted"><strong>set_degrees_counted</strong></a>(self, degrees_counted)</dt><dd><tt>Sets&nbsp;the&nbsp;number&nbsp;of&nbsp;degrees&nbsp;counted&nbsp;to&nbsp;a&nbsp;desired&nbsp;value.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+degrees_counted&nbsp;:&nbsp;The&nbsp;value&nbsp;to&nbsp;which&nbsp;the&nbsp;number&nbsp;of&nbsp;degrees&nbsp;counted&nbsp;should&nbsp;be&nbsp;set.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;number<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+TypeError&nbsp;:&nbsp;degrees_counted&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-set_stall_detection"><strong>set_stall_detection</strong></a>(self, stop_when_stalled)</dt><dd><tt>Turns&nbsp;stall&nbsp;detection&nbsp;on&nbsp;or&nbsp;off.<br>
+Stall&nbsp;detection&nbsp;senses&nbsp;when&nbsp;a&nbsp;motor&nbsp;has&nbsp;been&nbsp;blocked&nbsp;and&nbsp;can't&nbsp;move.&nbsp;If&nbsp;stall&nbsp;detection&nbsp;has&nbsp;been&nbsp;enabled&nbsp;and&nbsp;a&nbsp;motor&nbsp;is&nbsp;blocked,&nbsp;the&nbsp;motor&nbsp;will&nbsp;be&nbsp;powered&nbsp;off&nbsp;after&nbsp;two&nbsp;seconds&nbsp;and&nbsp;the&nbsp;current&nbsp;motor&nbsp;command&nbsp;will&nbsp;be&nbsp;interrupted.&nbsp;If&nbsp;stall&nbsp;detection&nbsp;has&nbsp;been&nbsp;disabled,&nbsp;the&nbsp;motor&nbsp;will&nbsp;keep&nbsp;trying&nbsp;to&nbsp;run&nbsp;and&nbsp;programs&nbsp;will&nbsp;"get&nbsp;stuck"&nbsp;until&nbsp;the&nbsp;motor&nbsp;is&nbsp;no&nbsp;longer&nbsp;blocked.<br>
+Stall&nbsp;detection&nbsp;is&nbsp;enabled&nbsp;by&nbsp;default.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+stop_when_stalled&nbsp;:&nbsp;Choose&nbsp;True&nbsp;to&nbsp;enable&nbsp;stall&nbsp;detection&nbsp;or&nbsp;False&nbsp;to&nbsp;disable&nbsp;it.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;boolean<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;True<br>
+&nbsp;<br>
+Errors<br>
+-----------<br>
+TypeError&nbsp;:&nbsp;stop_when_stalled&nbsp;is&nbsp;not&nbsp;a&nbsp;boolean.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-set_stop_action"><strong>set_stop_action</strong></a>(self, action)</dt><dd><tt>Sets&nbsp;the&nbsp;default&nbsp;behavior&nbsp;when&nbsp;a&nbsp;motor&nbsp;stops.<br>
+&nbsp;<br>
+Parameters<br>
+-------------<br>
+action&nbsp;:&nbsp;The&nbsp;desired&nbsp;motor&nbsp;behavior&nbsp;when&nbsp;the&nbsp;motor&nbsp;stops.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'coast','brake','hold'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;coast<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;action&nbsp;is&nbsp;not&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;action&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-start"><strong>start</strong></a>(self, speed<font color="#909090">=None</font>)</dt><dd><tt>Starts&nbsp;running&nbsp;the&nbsp;motor&nbsp;at&nbsp;a&nbsp;specified&nbsp;speed.<br>
+The&nbsp;motor&nbsp;will&nbsp;keep&nbsp;moving&nbsp;at&nbsp;this&nbsp;speed&nbsp;until&nbsp;you&nbsp;give&nbsp;it&nbsp;another&nbsp;motor&nbsp;command,&nbsp;or&nbsp;when&nbsp;your&nbsp;program&nbsp;ends.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+speed&nbsp;:&nbsp;The&nbsp;motor's&nbsp;speed.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100%&nbsp;to&nbsp;100%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;if&nbsp;no&nbsp;value&nbsp;is&nbsp;specified,&nbsp;it&nbsp;will&nbsp;use&nbsp;the&nbsp;default&nbsp;speed&nbsp;set&nbsp;by&nbsp;<a href="#Motor-set_default_speed">set_default_speed</a>().<br>
+&nbsp;<br>
+Errors<br>
+--------<br>
+TypeError&nbsp;:&nbsp;speed&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-start_at_power"><strong>start_at_power</strong></a>(self, power)</dt><dd><tt>Starts&nbsp;rotating&nbsp;the&nbsp;motor&nbsp;at&nbsp;a&nbsp;specified&nbsp;power&nbsp;level.<br>
+The&nbsp;motor&nbsp;will&nbsp;keep&nbsp;moving&nbsp;at&nbsp;this&nbsp;power&nbsp;level&nbsp;until&nbsp;you&nbsp;give&nbsp;it&nbsp;another&nbsp;motor&nbsp;command,&nbsp;or&nbsp;when&nbsp;your&nbsp;program&nbsp;ends.<br>
+&nbsp;<br>
+Parameters<br>
+---------<br>
+power&nbsp;:&nbsp;Power&nbsp;of&nbsp;the&nbsp;motor.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100%&nbsp;to&nbsp;100%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+Errors<br>
+---------<br>
+TypeError&nbsp;:&nbsp;power&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-stop"><strong>stop</strong></a>(self)</dt><dd><tt>Stops&nbsp;the&nbsp;motor.&nbsp;What&nbsp;the&nbsp;motor&nbsp;does&nbsp;after&nbsp;it&nbsp;stops&nbsp;depends&nbsp;on&nbsp;the&nbsp;action&nbsp;set&nbsp;in&nbsp;<a href="#Motor-set_stop_action">set_stop_action</a>().&nbsp;The&nbsp;default&nbsp;value&nbsp;of&nbsp;<a href="#Motor-set_stop_action">set_stop_action</a>()&nbsp;is&nbsp;coast.<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-was_interrupted"><strong>was_interrupted</strong></a>(self)</dt><dd><tt>Tests&nbsp;whether&nbsp;the&nbsp;motor&nbsp;was&nbsp;interrupted.<br>
+&nbsp;<br>
+Returns<br>
+-----------<br>
+True&nbsp;if&nbsp;the&nbsp;motor&nbsp;was&nbsp;interrupted&nbsp;since&nbsp;the&nbsp;last&nbsp;time&nbsp;<a href="#Motor-was_interrupted">was_interrupted</a>()&nbsp;was&nbsp;called,&nbsp;otherwise&nbsp;False.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;boolean<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False<br>
+&nbsp;<br>
+Errors<br>
+-----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+<dl><dt><a name="Motor-was_stalled"><strong>was_stalled</strong></a>(self)</dt><dd><tt>Tests&nbsp;whether&nbsp;the&nbsp;motor&nbsp;was&nbsp;stalled.<br>
+&nbsp;<br>
+Returns<br>
+-----------<br>
+True&nbsp;if&nbsp;the&nbsp;motor&nbsp;was&nbsp;stalled&nbsp;since&nbsp;the&nbsp;last&nbsp;time&nbsp;<a href="#Motor-was_stalled">was_stalled</a>()&nbsp;was&nbsp;called,&nbsp;otherwise&nbsp;False.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;boolean<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;or&nbsp;False<br>
+&nbsp;<br>
+Errors<br>
+-----------<br>
+RuntimeError&nbsp;:&nbsp;The&nbsp;motor&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;Port.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MotorPair">class <strong>MotorPair</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="MotorPair-__init__"><strong>__init__</strong></a>(self, port1, port2)</dt><dd><tt>Binds&nbsp;two&nbsp;motors&nbsp;together&nbsp;to&nbsp;use&nbsp;as&nbsp;a&nbsp;pair.<br>
+Parameters<br>
+----------<br>
+port1&nbsp;:&nbsp;Port&nbsp;of&nbsp;the&nbsp;first&nbsp;motor<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'A',&nbsp;'B',&nbsp;'C',&nbsp;'D',&nbsp;and&nbsp;'E'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+port2&nbsp;:&nbsp;&nbsp;Port&nbsp;of&nbsp;the&nbsp;second&nbsp;motor<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'A',&nbsp;'B',&nbsp;'C',&nbsp;'D',&nbsp;and&nbsp;'E'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="MotorPair-get_default_speed"><strong>get_default_speed</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;default&nbsp;motor&nbsp;speed.<br>
+&nbsp;<br>
+Returns<br>
+-----------<br>
+The&nbsp;default&nbsp;motor&nbsp;speed.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100&nbsp;%<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+RuntimeError&nbsp;:&nbsp;One&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;Ports&nbsp;do&nbsp;not&nbsp;have&nbsp;a&nbsp;motor&nbsp;connected&nbsp;or&nbsp;the&nbsp;motors&nbsp;could&nbsp;not&nbsp;be&nbsp;paired.</tt></dd></dl>
+
+<dl><dt><a name="MotorPair-move"><strong>move</strong></a>(self, amount, unit<font color="#909090">='cm'</font>, steering<font color="#909090">=0</font>, speed<font color="#909090">=None</font>)</dt><dd><tt>Start&nbsp;the&nbsp;2&nbsp;motors&nbsp;simultaneously&nbsp;to&nbsp;move&nbsp;a&nbsp;Driving&nbsp;Base.<br>
+steering=0&nbsp;makes&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;go&nbsp;straight.&nbsp;Negative&nbsp;numbers&nbsp;make&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;turn&nbsp;left.&nbsp;Positive&nbsp;numbers&nbsp;make&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;turn&nbsp;right.<br>
+The&nbsp;program&nbsp;will&nbsp;not&nbsp;continue&nbsp;until&nbsp;amount&nbsp;is&nbsp;reached.<br>
+If&nbsp;the&nbsp;value&nbsp;of&nbsp;steering&nbsp;is&nbsp;equal&nbsp;to&nbsp;-100&nbsp;or&nbsp;100,&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;perform&nbsp;a&nbsp;rotation&nbsp;on&nbsp;itself&nbsp;(tank&nbsp;move)&nbsp;with&nbsp;the&nbsp;default&nbsp;speed&nbsp;on&nbsp;each&nbsp;motor.<br>
+If&nbsp;the&nbsp;value&nbsp;of&nbsp;steering&nbsp;is&nbsp;outside&nbsp;of&nbsp;the&nbsp;allowed&nbsp;range,&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;-100&nbsp;or&nbsp;100&nbsp;depending&nbsp;whether&nbsp;the&nbsp;value&nbsp;is&nbsp;positive&nbsp;or&nbsp;negative.<br>
+If&nbsp;speed&nbsp;is&nbsp;outside&nbsp;of&nbsp;the&nbsp;allowed&nbsp;range,&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;-100&nbsp;or&nbsp;100&nbsp;depending&nbsp;whether&nbsp;the&nbsp;value&nbsp;is&nbsp;positive&nbsp;or&nbsp;negative.<br>
+If&nbsp;the&nbsp;speed&nbsp;is&nbsp;negative,&nbsp;then&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;move&nbsp;backward&nbsp;instead&nbsp;of&nbsp;forward.&nbsp;Likewise,&nbsp;if&nbsp;amount&nbsp;is&nbsp;negative,&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;move&nbsp;backward&nbsp;instead&nbsp;of&nbsp;forward.&nbsp;If&nbsp;both&nbsp;the&nbsp;speed&nbsp;and&nbsp;the&nbsp;amount&nbsp;are&nbsp;negative,&nbsp;then&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;move&nbsp;forward.<br>
+When&nbsp;unit&nbsp;is&nbsp;'cm'&nbsp;or&nbsp;'in',&nbsp;the&nbsp;amount&nbsp;of&nbsp;the&nbsp;unit&nbsp;parameter&nbsp;is&nbsp;the&nbsp;horizontal&nbsp;distance&nbsp;that&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;travel&nbsp;before&nbsp;stopping.&nbsp;The&nbsp;relationship&nbsp;between&nbsp;motor&nbsp;rotations&nbsp;and&nbsp;distance&nbsp;traveled&nbsp;can&nbsp;be&nbsp;adjusted&nbsp;by&nbsp;calling&nbsp;<a href="#MotorPair-set_motor_rotation">set_motor_rotation</a>().<br>
+When&nbsp;'unit'&nbsp;is&nbsp;'rotations'&nbsp;or&nbsp;'degrees',&nbsp;the&nbsp;amount&nbsp;parameter&nbsp;value&nbsp;specifies&nbsp;how&nbsp;much&nbsp;the&nbsp;motor&nbsp;axle&nbsp;will&nbsp;turn&nbsp;before&nbsp;stopping.<br>
+When&nbsp;unit&nbsp;is&nbsp;'seconds',&nbsp;the&nbsp;amount&nbsp;parameter&nbsp;value&nbsp;specifies&nbsp;the&nbsp;amount&nbsp;of&nbsp;time&nbsp;the&nbsp;motors&nbsp;will&nbsp;run&nbsp;before&nbsp;stopping.<br>
+&nbsp;<br>
+Parameters<br>
+-------------<br>
+amount&nbsp;:&nbsp;The&nbsp;quantity&nbsp;to&nbsp;move&nbsp;in&nbsp;relation&nbsp;to&nbsp;the&nbsp;specified&nbsp;unit&nbsp;of&nbsp;measurement.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;numbers)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;value<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+unit&nbsp;:&nbsp;The&nbsp;units&nbsp;of&nbsp;measurement&nbsp;of&nbsp;the&nbsp;amount&nbsp;parameter<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'cm','in','rotations','degrees','seconds'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;cm<br>
+&nbsp;<br>
+steering&nbsp;:&nbsp;The&nbsp;direction&nbsp;and&nbsp;the&nbsp;quantity&nbsp;to&nbsp;steer&nbsp;the&nbsp;Driving&nbsp;Base.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;0<br>
+&nbsp;<br>
+speed&nbsp;:&nbsp;The&nbsp;motor&nbsp;speed.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;the&nbsp;speed&nbsp;set&nbsp;by&nbsp;<a href="#MotorPair-set_default_speed">set_default_speed</a>()<br>
+&nbsp;<br>
+Errors<br>
+--------------<br>
+TypeError&nbsp;:&nbsp;amount&nbsp;is&nbsp;not&nbsp;a&nbsp;number,&nbsp;or&nbsp;steering&nbsp;or&nbsp;speed&nbsp;is&nbsp;not&nbsp;an&nbsp;integer,&nbsp;or&nbsp;unit&nbsp;is&nbsp;not&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;unit&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;One&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;motors&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;or&nbsp;the&nbsp;motors&nbsp;could&nbsp;not&nbsp;be&nbsp;paired.</tt></dd></dl>
+
+<dl><dt><a name="MotorPair-move_tank"><strong>move_tank</strong></a>(self, amount, unit<font color="#909090">='cm'</font>, left_speed<font color="#909090">=None</font>, right_speed<font color="#909090">=None</font>)</dt><dd><tt>Moves&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;using&nbsp;differential&nbsp;(tank)&nbsp;steering.<br>
+The&nbsp;speed&nbsp;of&nbsp;each&nbsp;motor&nbsp;can&nbsp;be&nbsp;controlled&nbsp;independently&nbsp;for&nbsp;differential&nbsp;(tank)&nbsp;drive&nbsp;Driving&nbsp;Bases.<br>
+When&nbsp;unit&nbsp;is&nbsp;'cm'&nbsp;or&nbsp;'in',&nbsp;the&nbsp;amount&nbsp;of&nbsp;the&nbsp;unit&nbsp;parameter&nbsp;is&nbsp;the&nbsp;horizontal&nbsp;distance&nbsp;that&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;travel&nbsp;before&nbsp;stopping.&nbsp;The&nbsp;relationship&nbsp;between&nbsp;motor&nbsp;rotations&nbsp;and&nbsp;distance&nbsp;traveled&nbsp;can&nbsp;be&nbsp;adjusted&nbsp;by&nbsp;calling&nbsp;<a href="#MotorPair-set_motor_rotation">set_motor_rotation</a>().<br>
+When&nbsp;'unit'&nbsp;is&nbsp;'rotations'&nbsp;or&nbsp;'degrees',&nbsp;the&nbsp;amount&nbsp;parameter&nbsp;value&nbsp;specifies&nbsp;how&nbsp;much&nbsp;the&nbsp;motor&nbsp;axle&nbsp;will&nbsp;turn&nbsp;before&nbsp;stopping.<br>
+When&nbsp;unit&nbsp;is&nbsp;'seconds',&nbsp;the&nbsp;amount&nbsp;parameter&nbsp;value&nbsp;specifies&nbsp;the&nbsp;amount&nbsp;of&nbsp;time&nbsp;the&nbsp;motors&nbsp;will&nbsp;run&nbsp;before&nbsp;stopping.<br>
+If&nbsp;left_speed&nbsp;or&nbsp;right_speed&nbsp;is&nbsp;outside&nbsp;of&nbsp;the&nbsp;allowed&nbsp;range,&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;-100&nbsp;or&nbsp;100&nbsp;depending&nbsp;whether&nbsp;the&nbsp;value&nbsp;is&nbsp;positive&nbsp;or&nbsp;negative.<br>
+If&nbsp;one&nbsp;of&nbsp;the&nbsp;speed&nbsp;is&nbsp;negative&nbsp;(left_speed&nbsp;or&nbsp;right_speed),&nbsp;then&nbsp;the&nbsp;motor&nbsp;with&nbsp;that&nbsp;negative&nbsp;speed&nbsp;will&nbsp;run&nbsp;backward&nbsp;instead&nbsp;of&nbsp;forward.&nbsp;If&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;amount&nbsp;parameter&nbsp;is&nbsp;negative,&nbsp;both&nbsp;motors&nbsp;will&nbsp;rotate&nbsp;backward&nbsp;instead&nbsp;of&nbsp;forward.&nbsp;If&nbsp;both&nbsp;the&nbsp;speed&nbsp;values&nbsp;(left_speed&nbsp;or&nbsp;right_speed)&nbsp;are&nbsp;negative&nbsp;and&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;amount&nbsp;parameter&nbsp;is&nbsp;negative,&nbsp;then&nbsp;the&nbsp;both&nbsp;motors&nbsp;will&nbsp;rotate&nbsp;forward.<br>
+The&nbsp;program&nbsp;will&nbsp;not&nbsp;continue&nbsp;until&nbsp;amount&nbsp;is&nbsp;reached.<br>
+&nbsp;<br>
+Parameters<br>
+-----------------<br>
+amount&nbsp;:&nbsp;The&nbsp;quantity&nbsp;to&nbsp;move&nbsp;in&nbsp;relation&nbsp;to&nbsp;the&nbsp;specified&nbsp;unit&nbsp;of&nbsp;measurement.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;value<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+unit&nbsp;:&nbsp;The&nbsp;units&nbsp;of&nbsp;measurement&nbsp;of&nbsp;the&nbsp;amount&nbsp;parameter<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'cm','in','rotations','degrees','seconds'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;cm<br>
+&nbsp;<br>
+left_speed&nbsp;:&nbsp;The&nbsp;speed&nbsp;of&nbsp;the&nbsp;left&nbsp;motor<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;the&nbsp;speed&nbsp;set&nbsp;by&nbsp;<a href="#MotorPair-set_default_speed">set_default_speed</a>()<br>
+&nbsp;<br>
+right_speed&nbsp;:&nbsp;The&nbsp;speed&nbsp;of&nbsp;the&nbsp;right&nbsp;motor<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;the&nbsp;speed&nbsp;set&nbsp;by&nbsp;<a href="#MotorPair-set_default_speed">set_default_speed</a>()<br>
+&nbsp;<br>
+Errors<br>
+--------------<br>
+TypeError&nbsp;:&nbsp;amount,&nbsp;left_speed&nbsp;or&nbsp;right_speed&nbsp;is&nbsp;not&nbsp;a&nbsp;number&nbsp;or&nbsp;unit&nbsp;is&nbsp;not&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;unit&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;One&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;Ports&nbsp;do&nbsp;not&nbsp;have&nbsp;a&nbsp;motor&nbsp;connected&nbsp;or&nbsp;the&nbsp;motors&nbsp;could&nbsp;not&nbsp;be&nbsp;paired.</tt></dd></dl>
+
+<dl><dt><a name="MotorPair-set_default_speed"><strong>set_default_speed</strong></a>(self, speed)</dt><dd><tt>Sets&nbsp;the&nbsp;default&nbsp;motor&nbsp;speed.<br>
+If&nbsp;speed&nbsp;is&nbsp;outside&nbsp;of&nbsp;the&nbsp;allowed&nbsp;range,&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;-100&nbsp;or&nbsp;100&nbsp;depending&nbsp;on&nbsp;whether&nbsp;the&nbsp;value&nbsp;is&nbsp;positive&nbsp;or&nbsp;negative.<br>
+Setting&nbsp;the&nbsp;speed&nbsp;will&nbsp;not&nbsp;have&nbsp;any&nbsp;effect&nbsp;until&nbsp;one&nbsp;of&nbsp;the&nbsp;move&nbsp;or&nbsp;start&nbsp;methods&nbsp;is&nbsp;called,&nbsp;even&nbsp;if&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;is&nbsp;already&nbsp;moving.<br>
+&nbsp;<br>
+Parameters<br>
+--------<br>
+speed&nbsp;:&nbsp;The&nbsp;default&nbsp;motor&nbsp;speed<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+TypeError&nbsp;:&nbsp;speed&nbsp;is&nbsp;not&nbsp;a&nbsp;number.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;One&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;Ports&nbsp;do&nbsp;not&nbsp;have&nbsp;a&nbsp;motor&nbsp;connected&nbsp;or&nbsp;the&nbsp;motors&nbsp;could&nbsp;not&nbsp;be&nbsp;paired.</tt></dd></dl>
+
+<dl><dt><a name="MotorPair-set_motor_rotation"><strong>set_motor_rotation</strong></a>(self, amount, unit<font color="#909090">='cm'</font>)</dt><dd><tt>Sets&nbsp;the&nbsp;ratio&nbsp;of&nbsp;one&nbsp;motor&nbsp;rotation&nbsp;to&nbsp;the&nbsp;distance&nbsp;traveled.<br>
+If&nbsp;there&nbsp;are&nbsp;no&nbsp;gears&nbsp;used&nbsp;between&nbsp;the&nbsp;motors&nbsp;and&nbsp;the&nbsp;wheels&nbsp;of&nbsp;the&nbsp;Driving&nbsp;Base,&nbsp;then&nbsp;amount&nbsp;is&nbsp;the&nbsp;circumference&nbsp;of&nbsp;one&nbsp;wheel.<br>
+Calling&nbsp;this&nbsp;method&nbsp;does&nbsp;not&nbsp;affect&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;if&nbsp;it&nbsp;is&nbsp;already&nbsp;currently&nbsp;running.&nbsp;It&nbsp;will&nbsp;only&nbsp;have&nbsp;an&nbsp;effect&nbsp;the&nbsp;next&nbsp;time&nbsp;one&nbsp;of&nbsp;the&nbsp;move&nbsp;or&nbsp;start&nbsp;methods&nbsp;is&nbsp;used.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+amount&nbsp;:&nbsp;The&nbsp;distance&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;moves&nbsp;when&nbsp;both&nbsp;motors&nbsp;move&nbsp;one&nbsp;rotation&nbsp;each.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;value<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;17.6cm&nbsp;(large&nbsp;wheel)<br>
+&nbsp;<br>
+unit&nbsp;:&nbsp;The&nbsp;units&nbsp;of&nbsp;measurement&nbsp;of&nbsp;the&nbsp;amount&nbsp;parameter.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'cm','in'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;cm<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;amount&nbsp;is&nbsp;not&nbsp;a&nbsp;number&nbsp;or&nbsp;unit&nbsp;is&nbsp;not&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;unit&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;One&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;Ports&nbsp;do&nbsp;not&nbsp;have&nbsp;a&nbsp;motor&nbsp;connected&nbsp;or&nbsp;the&nbsp;motors&nbsp;could&nbsp;not&nbsp;be&nbsp;paired.</tt></dd></dl>
+
+<dl><dt><a name="MotorPair-set_stop_action"><strong>set_stop_action</strong></a>(self, action)</dt><dd><tt>Sets&nbsp;the&nbsp;motor&nbsp;action&nbsp;that&nbsp;will&nbsp;be&nbsp;used&nbsp;when&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;stops.<br>
+If&nbsp;action&nbsp;is&nbsp;'brake'&nbsp;the&nbsp;motors&nbsp;will&nbsp;stop&nbsp;quickly&nbsp;but&nbsp;will&nbsp;be&nbsp;allowed&nbsp;to&nbsp;turn&nbsp;freely.<br>
+If&nbsp;action&nbsp;is&nbsp;'hold',&nbsp;the&nbsp;motors&nbsp;will&nbsp;actively&nbsp;hold&nbsp;their&nbsp;current&nbsp;position&nbsp;and&nbsp;cannot&nbsp;be&nbsp;turned&nbsp;manually.<br>
+If&nbsp;action&nbsp;is&nbsp;set&nbsp;to&nbsp;'coast',&nbsp;the&nbsp;motors&nbsp;will&nbsp;stop&nbsp;slowly&nbsp;and&nbsp;will&nbsp;be&nbsp;able&nbsp;to&nbsp;be&nbsp;turned&nbsp;freely.<br>
+Setting&nbsp;the&nbsp;stop&nbsp;action&nbsp;does&nbsp;not&nbsp;take&nbsp;immediate&nbsp;effect&nbsp;on&nbsp;the&nbsp;motors.&nbsp;The&nbsp;setting&nbsp;will&nbsp;be&nbsp;saved&nbsp;and&nbsp;used&nbsp;whenever&nbsp;<a href="#MotorPair-stop">stop</a>()&nbsp;is&nbsp;called&nbsp;or&nbsp;when&nbsp;one&nbsp;of&nbsp;the&nbsp;move&nbsp;methods&nbsp;has&nbsp;completed&nbsp;without&nbsp;being&nbsp;interrupted.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+action&nbsp;:&nbsp;The&nbsp;desired&nbsp;action&nbsp;of&nbsp;the&nbsp;motors&nbsp;when&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;stops.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;'brake','hold','coast'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;'coast'<br>
+&nbsp;<br>
+Errors<br>
+-----------<br>
+TypeError&nbsp;:&nbsp;action&nbsp;is&nbsp;not&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;&nbsp;action&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;One&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;Ports&nbsp;do&nbsp;not&nbsp;have&nbsp;a&nbsp;motor&nbsp;connected&nbsp;or&nbsp;the&nbsp;motors&nbsp;could&nbsp;not&nbsp;be&nbsp;paired.</tt></dd></dl>
+
+<dl><dt><a name="MotorPair-start"><strong>start</strong></a>(self, steering<font color="#909090">=0</font>, speed<font color="#909090">=None</font>)</dt><dd><tt>Start&nbsp;the&nbsp;2&nbsp;motors&nbsp;simultaneously,&nbsp;to&nbsp;will&nbsp;move&nbsp;a&nbsp;Driving&nbsp;Base.<br>
+steering=0&nbsp;makes&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;go&nbsp;straight.&nbsp;Negative&nbsp;numbers&nbsp;make&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;turn&nbsp;left.&nbsp;Positive&nbsp;numbers&nbsp;make&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;turn&nbsp;right.<br>
+The&nbsp;program&nbsp;flow&nbsp;is&nbsp;not&nbsp;interrupted.&nbsp;This&nbsp;is&nbsp;most&nbsp;likely&nbsp;interrupted&nbsp;by&nbsp;a&nbsp;sensor&nbsp;input&nbsp;and&nbsp;a&nbsp;condition.<br>
+If&nbsp;the&nbsp;value&nbsp;of&nbsp;steering&nbsp;is&nbsp;equal&nbsp;to&nbsp;-100&nbsp;or&nbsp;100,&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;perform&nbsp;a&nbsp;rotation&nbsp;on&nbsp;itself&nbsp;(tank&nbsp;move)&nbsp;with&nbsp;the&nbsp;default&nbsp;speed&nbsp;on&nbsp;each&nbsp;motor.<br>
+If&nbsp;the&nbsp;value&nbsp;of&nbsp;steering&nbsp;is&nbsp;outside&nbsp;of&nbsp;the&nbsp;allowed&nbsp;range,&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;-100&nbsp;or&nbsp;100&nbsp;depending&nbsp;on&nbsp;whether&nbsp;the&nbsp;value&nbsp;is&nbsp;positive&nbsp;or&nbsp;negative.<br>
+If&nbsp;speed&nbsp;is&nbsp;outside&nbsp;of&nbsp;the&nbsp;allowed&nbsp;range,&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;-100&nbsp;or&nbsp;100&nbsp;depending&nbsp;whether&nbsp;the&nbsp;value&nbsp;is&nbsp;positive&nbsp;or&nbsp;negative.<br>
+If&nbsp;the&nbsp;speed&nbsp;is&nbsp;negative,&nbsp;then&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;move&nbsp;backward&nbsp;instead&nbsp;of&nbsp;forward.&nbsp;Likewise,&nbsp;if&nbsp;amount&nbsp;is&nbsp;negative,&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;move&nbsp;backward&nbsp;instead&nbsp;of&nbsp;forward.&nbsp;If&nbsp;both&nbsp;the&nbsp;speed&nbsp;and&nbsp;the&nbsp;amount&nbsp;are&nbsp;negative,&nbsp;then&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;move&nbsp;forward.<br>
+&nbsp;<br>
+Parameters<br>
+------------<br>
+steering&nbsp;:&nbsp;The&nbsp;direction&nbsp;and&nbsp;the&nbsp;quantity&nbsp;to&nbsp;steer&nbsp;the&nbsp;Driving&nbsp;Base.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;0<br>
+&nbsp;<br>
+speed&nbsp;:&nbsp;The&nbsp;speed&nbsp;at&nbsp;which&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;move&nbsp;while&nbsp;performing&nbsp;a&nbsp;curve.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100%&nbsp;to&nbsp;100%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;if&nbsp;no&nbsp;value&nbsp;is&nbsp;specified,&nbsp;it&nbsp;will&nbsp;use&nbsp;the&nbsp;default&nbsp;speed&nbsp;set&nbsp;by&nbsp;<a href="#MotorPair-set_default_speed">set_default_speed</a>().<br>
+&nbsp;<br>
+Errors<br>
+-----------<br>
+TypeError&nbsp;:&nbsp;Steering&nbsp;or&nbsp;speed&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;One&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;motors&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;or&nbsp;the&nbsp;motors&nbsp;could&nbsp;not&nbsp;be&nbsp;paired.</tt></dd></dl>
+
+<dl><dt><a name="MotorPair-start_at_power"><strong>start_at_power</strong></a>(self, power, steering<font color="#909090">=0</font>)</dt><dd><tt>Starts&nbsp;moving&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;without&nbsp;speed&nbsp;control.<br>
+The&nbsp;motors&nbsp;can&nbsp;also&nbsp;be&nbsp;driven&nbsp;without&nbsp;speed&nbsp;control.&nbsp;This&nbsp;is&nbsp;useful&nbsp;when&nbsp;using&nbsp;your&nbsp;own&nbsp;control&nbsp;algorithm&nbsp;(e.g.,&nbsp;a&nbsp;proportional&nbsp;line&nbsp;follower).<br>
+If&nbsp;steering&nbsp;is&nbsp;outside&nbsp;of&nbsp;the&nbsp;allowed&nbsp;range,&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;-100&nbsp;or&nbsp;100&nbsp;depending&nbsp;whether&nbsp;the&nbsp;value&nbsp;is&nbsp;positive&nbsp;or&nbsp;negative.<br>
+If&nbsp;power&nbsp;is&nbsp;outside&nbsp;of&nbsp;the&nbsp;allowed&nbsp;range,&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;-100&nbsp;or&nbsp;100&nbsp;depending&nbsp;whether&nbsp;the&nbsp;value&nbsp;is&nbsp;positive&nbsp;or&nbsp;negative.<br>
+If&nbsp;the&nbsp;power&nbsp;is&nbsp;negative,&nbsp;then&nbsp;Driving&nbsp;Base&nbsp;will&nbsp;move&nbsp;backward&nbsp;instead&nbsp;of&nbsp;forward.<br>
+The&nbsp;program&nbsp;flow&nbsp;is&nbsp;not&nbsp;interrupted.&nbsp;This&nbsp;can&nbsp;most&nbsp;likely&nbsp;interrupted&nbsp;by&nbsp;a&nbsp;sensor&nbsp;input&nbsp;and&nbsp;a&nbsp;condition.<br>
+&nbsp;<br>
+Parameters<br>
+--------------<br>
+power&nbsp;:&nbsp;&nbsp;The&nbsp;amount&nbsp;of&nbsp;power&nbsp;to&nbsp;send&nbsp;to&nbsp;the&nbsp;motors.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100&nbsp;%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100<br>
+&nbsp;<br>
+steering&nbsp;:&nbsp;The&nbsp;steering&nbsp;direction&nbsp;(-100&nbsp;to&nbsp;100).&nbsp;0&nbsp;makes&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;go&nbsp;straight.&nbsp;Negative&nbsp;numbers&nbsp;make&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;turn&nbsp;left.&nbsp;Positive&nbsp;numbers&nbsp;make&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;turn&nbsp;right.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;Integer<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;0<br>
+&nbsp;<br>
+Errors<br>
+----------<br>
+TypeError&nbsp;:&nbsp;steering&nbsp;or&nbsp;power&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;One&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;Ports&nbsp;do&nbsp;not&nbsp;have&nbsp;a&nbsp;motor&nbsp;connected&nbsp;or&nbsp;the&nbsp;motors&nbsp;could&nbsp;not&nbsp;be&nbsp;paired.</tt></dd></dl>
+
+<dl><dt><a name="MotorPair-start_tank"><strong>start_tank</strong></a>(self, left_speed, right_speed)</dt><dd><tt>Starts&nbsp;moving&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;using&nbsp;differential&nbsp;(tank)&nbsp;steering.<br>
+The&nbsp;speed&nbsp;of&nbsp;each&nbsp;motor&nbsp;can&nbsp;be&nbsp;controlled&nbsp;independently&nbsp;for&nbsp;differential&nbsp;(tank)&nbsp;drive&nbsp;Driving&nbsp;Bases.<br>
+If&nbsp;left_speed&nbsp;or&nbsp;right_speed&nbsp;is&nbsp;outside&nbsp;of&nbsp;the&nbsp;allowed&nbsp;range,&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;-100&nbsp;or&nbsp;100&nbsp;depending&nbsp;whether&nbsp;the&nbsp;value&nbsp;is&nbsp;positive&nbsp;or&nbsp;negative.<br>
+If&nbsp;a&nbsp;speed&nbsp;is&nbsp;negative,&nbsp;then&nbsp;the&nbsp;motors&nbsp;will&nbsp;move&nbsp;backward&nbsp;instead&nbsp;of&nbsp;forward.<br>
+The&nbsp;program&nbsp;flow&nbsp;is&nbsp;not&nbsp;interrupted.&nbsp;This&nbsp;is&nbsp;most&nbsp;likely&nbsp;interrupted&nbsp;by&nbsp;a&nbsp;sensor&nbsp;input&nbsp;and&nbsp;a&nbsp;condition.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+left_speed&nbsp;:&nbsp;The&nbsp;speed&nbsp;of&nbsp;the&nbsp;left&nbsp;motor.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+right_speed&nbsp;:&nbsp;The&nbsp;speed&nbsp;of&nbsp;the&nbsp;right&nbsp;motor.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+Errors<br>
+-------<br>
+TypeError&nbsp;:&nbsp;left_speed&nbsp;or&nbsp;right_speed&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;One&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;Ports&nbsp;do&nbsp;not&nbsp;have&nbsp;a&nbsp;motor&nbsp;connected&nbsp;or&nbsp;the&nbsp;motors&nbsp;could&nbsp;not&nbsp;be&nbsp;paired.</tt></dd></dl>
+
+<dl><dt><a name="MotorPair-start_tank_at_power"><strong>start_tank_at_power</strong></a>(self, left_power, right_power)</dt><dd><tt>Starts&nbsp;moving&nbsp;the&nbsp;Driving&nbsp;Base&nbsp;using&nbsp;differential&nbsp;(tank)&nbsp;steering&nbsp;without&nbsp;speed&nbsp;control.<br>
+The&nbsp;motors&nbsp;can&nbsp;also&nbsp;be&nbsp;driven&nbsp;without&nbsp;speed&nbsp;control.&nbsp;This&nbsp;is&nbsp;useful&nbsp;when&nbsp;using&nbsp;your&nbsp;own&nbsp;control&nbsp;algorithm&nbsp;(e.g.,&nbsp;a&nbsp;proportional&nbsp;line&nbsp;follower).<br>
+If&nbsp;left_power&nbsp;or&nbsp;right_power&nbsp;is&nbsp;outside&nbsp;of&nbsp;the&nbsp;allowed&nbsp;range,&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;rounded&nbsp;to&nbsp;-100&nbsp;or&nbsp;100&nbsp;depending&nbsp;on&nbsp;whether&nbsp;the&nbsp;value&nbsp;is&nbsp;positive&nbsp;or&nbsp;negative.<br>
+If&nbsp;a&nbsp;power&nbsp;is&nbsp;negative,&nbsp;then&nbsp;the&nbsp;corresponding&nbsp;motor&nbsp;will&nbsp;move&nbsp;backward&nbsp;instead&nbsp;of&nbsp;forward.<br>
+The&nbsp;program&nbsp;flow&nbsp;is&nbsp;not&nbsp;interrupted.&nbsp;This&nbsp;can&nbsp;most&nbsp;likely&nbsp;interrupted&nbsp;by&nbsp;a&nbsp;sensor&nbsp;input&nbsp;and&nbsp;a&nbsp;condition.<br>
+&nbsp;<br>
+Parameters<br>
+===========<br>
+left_power&nbsp;:&nbsp;The&nbsp;power&nbsp;of&nbsp;the&nbsp;left&nbsp;motor<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;Integer<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+right_power&nbsp;:&nbsp;The&nbsp;power&nbsp;of&nbsp;the&nbsp;right&nbsp;motor<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;Integer<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;-100&nbsp;to&nbsp;100<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;left_power&nbsp;or&nbsp;right_power&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+RuntimeError&nbsp;:&nbsp;One&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;Ports&nbsp;do&nbsp;not&nbsp;have&nbsp;a&nbsp;motor&nbsp;connected&nbsp;or&nbsp;the&nbsp;motors&nbsp;could&nbsp;not&nbsp;be&nbsp;paired.</tt></dd></dl>
+
+<dl><dt><a name="MotorPair-stop"><strong>stop</strong></a>(self)</dt><dd><tt>Stops&nbsp;the&nbsp;2&nbsp;motors&nbsp;simultaneously,&nbsp;which&nbsp;will&nbsp;stop&nbsp;a&nbsp;Driving&nbsp;Base.<br>
+The&nbsp;motors&nbsp;will&nbsp;either&nbsp;actively&nbsp;hold&nbsp;their&nbsp;current&nbsp;position&nbsp;or&nbsp;coast&nbsp;freely&nbsp;depending&nbsp;on&nbsp;the&nbsp;option&nbsp;selected&nbsp;by&nbsp;<a href="#MotorPair-set_stop_action">set_stop_action</a>().<br>
+Errors<br>
+--------------<br>
+RuntimeError&nbsp;:&nbsp;One&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;motors&nbsp;has&nbsp;been&nbsp;disconnected&nbsp;or&nbsp;the&nbsp;motors&nbsp;could&nbsp;not&nbsp;be&nbsp;paired.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PrimeHub">class <strong>PrimeHub</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="PrimeHub-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>The&nbsp;<a href="#PrimeHub">PrimeHub</a>&nbsp;is&nbsp;divided&nbsp;into&nbsp;six&nbsp;components,&nbsp;each&nbsp;with&nbsp;a&nbsp;number&nbsp;of&nbsp;functions&nbsp;linked&nbsp;to&nbsp;it.&nbsp;To&nbsp;be&nbsp;able&nbsp;to&nbsp;use&nbsp;the&nbsp;Hub,&nbsp;you&nbsp;must&nbsp;initialize&nbsp;it.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>PORT_A</strong> = 'A'</dl>
+
+<dl><dt><strong>PORT_B</strong> = 'B'</dl>
+
+<dl><dt><strong>PORT_C</strong> = 'C'</dl>
+
+<dl><dt><strong>PORT_D</strong> = 'D'</dl>
+
+<dl><dt><strong>PORT_E</strong> = 'E'</dl>
+
+<dl><dt><strong>left_button</strong> = &lt;spike.Buttons instance&gt;</dl>
+
+<dl><dt><strong>light_matrix</strong> = &lt;spike.LightMatrix instance&gt;</dl>
+
+<dl><dt><strong>motion_sensor</strong> = &lt;spike.MotionSensor instance&gt;</dl>
+
+<dl><dt><strong>right_button</strong> = &lt;spike.Buttons instance&gt;</dl>
+
+<dl><dt><strong>speaker</strong> = &lt;spike.Speaker instance&gt;</dl>
+
+<dl><dt><strong>status_light</strong> = &lt;spike.StatusLight instance&gt;</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Speaker">class <strong>Speaker</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Speaker-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Controls&nbsp;this&nbsp;SpikeHub&nbsp;speaker</tt></dd></dl>
+
+<dl><dt><a name="Speaker-beep"><strong>beep</strong></a>(self, note<font color="#909090">=60</font>, seconds<font color="#909090">=0.2</font>)</dt><dd><tt>Plays&nbsp;a&nbsp;beep&nbsp;on&nbsp;the&nbsp;Hub.<br>
+Your&nbsp;program&nbsp;will&nbsp;not&nbsp;continue&nbsp;until&nbsp;seconds&nbsp;have&nbsp;passed.<br>
+Parameters<br>
+---------<br>
+note&nbsp;:&nbsp;The&nbsp;MIDI&nbsp;note&nbsp;number.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;44&nbsp;to&nbsp;123&nbsp;(60&nbsp;is&nbsp;middle&nbsp;C&nbsp;note)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;60&nbsp;(middle&nbsp;C&nbsp;note)<br>
+&nbsp;<br>
+seconds&nbsp;:&nbsp;The&nbsp;duration&nbsp;of&nbsp;the&nbsp;beep&nbsp;in&nbsp;seconds.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;values<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;0.2&nbsp;seconds<br>
+&nbsp;<br>
+Errors<br>
+---------<br>
+TypeError&nbsp;:&nbsp;note&nbsp;is&nbsp;not&nbsp;an&nbsp;integer&nbsp;or&nbsp;seconds&nbsp;is&nbsp;not&nbsp;a&nbsp;number.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;note&nbsp;is&nbsp;not&nbsp;within&nbsp;the&nbsp;allowed&nbsp;range&nbsp;of&nbsp;44-123.</tt></dd></dl>
+
+<dl><dt><a name="Speaker-get_volume"><strong>get_volume</strong></a>(self)</dt><dd><tt>Retrieves&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;speaker&nbsp;volume.<br>
+This&nbsp;only&nbsp;retrieves&nbsp;the&nbsp;volume&nbsp;for&nbsp;the&nbsp;Hub&nbsp;and&nbsp;not&nbsp;the&nbsp;programming&nbsp;app.<br>
+&nbsp;<br>
+Returns<br>
+--------------<br>
+The&nbsp;current&nbsp;volume.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100%</tt></dd></dl>
+
+<dl><dt><a name="Speaker-set_volume"><strong>set_volume</strong></a>(self, volume)</dt><dd><tt>Sets&nbsp;the&nbsp;speaker&nbsp;volume.<br>
+If&nbsp;the&nbsp;assigned&nbsp;volume&nbsp;is&nbsp;out&nbsp;of&nbsp;range,&nbsp;the&nbsp;nearest&nbsp;volume&nbsp;(0&nbsp;or&nbsp;100)&nbsp;will&nbsp;be&nbsp;used&nbsp;instead.&nbsp;This&nbsp;only&nbsp;sets&nbsp;the&nbsp;volume&nbsp;for&nbsp;the&nbsp;Hub&nbsp;and&nbsp;not&nbsp;the&nbsp;programming&nbsp;app.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+volume&nbsp;:&nbsp;The&nbsp;new&nbsp;volume&nbsp;percentage.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;integer&nbsp;(positive&nbsp;or&nbsp;negative&nbsp;whole&nbsp;number,&nbsp;including&nbsp;0)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;0&nbsp;to&nbsp;100%<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;100%<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;volume&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.</tt></dd></dl>
+
+<dl><dt><a name="Speaker-start_beep"><strong>start_beep</strong></a>(self, note<font color="#909090">=60</font>)</dt><dd><tt>Starts&nbsp;playing&nbsp;a&nbsp;beep.<br>
+The&nbsp;beep&nbsp;will&nbsp;play&nbsp;indefinitely&nbsp;until&nbsp;<a href="#Speaker-stop">stop</a>()&nbsp;or&nbsp;another&nbsp;beep&nbsp;method&nbsp;is&nbsp;called.<br>
+&nbsp;<br>
+Parameters<br>
+-----------<br>
+note&nbsp;:&nbsp;The&nbsp;MIDI&nbsp;note&nbsp;number.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;number)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;44&nbsp;to&nbsp;123&nbsp;(60&nbsp;is&nbsp;middle&nbsp;C&nbsp;note)<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;60&nbsp;(middle&nbsp;C&nbsp;note)<br>
+&nbsp;<br>
+Errors<br>
+------------<br>
+TypeError&nbsp;:&nbsp;note&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;note&nbsp;is&nbsp;not&nbsp;within&nbsp;the&nbsp;allowed&nbsp;range&nbsp;of&nbsp;44-123</tt></dd></dl>
+
+<dl><dt><a name="Speaker-stop"><strong>stop</strong></a>(self)</dt><dd><tt>Stops&nbsp;any&nbsp;sound&nbsp;that&nbsp;is&nbsp;playing.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="StatusLight">class <strong>StatusLight</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="StatusLight-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Controls&nbsp;the&nbsp;Status&nbsp;light&nbsp;on&nbsp;the&nbsp;<a href="#PrimeHub">PrimeHub</a></tt></dd></dl>
+
+<dl><dt><a name="StatusLight-off"><strong>off</strong></a>(self)</dt><dd><tt>Turns&nbsp;the&nbsp;status&nbsp;light&nbsp;off</tt></dd></dl>
+
+<dl><dt><a name="StatusLight-on"><strong>on</strong></a>(self, color<font color="#909090">='white'</font>)</dt><dd><tt>Sets&nbsp;the&nbsp;color&nbsp;of&nbsp;the&nbsp;light.<br>
+&nbsp;<br>
+Parameters<br>
+--------<br>
+color&nbsp;:&nbsp;Illuminates&nbsp;the&nbsp;Brick&nbsp;Status&nbsp;Light&nbsp;on&nbsp;the&nbsp;Hub&nbsp;in&nbsp;the&nbsp;specified&nbsp;color<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;string&nbsp;(text)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;azure,black,'blue','cyan','green','orange','pink','red','violet','yellow','white'<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;'white'<br>
+&nbsp;<br>
+Errors<br>
+-------<br>
+TypeError&nbsp;:&nbsp;color&nbsp;is&nbsp;not&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;color&nbsp;is&nbsp;not&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;values.</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-greater_than"><strong>greater_than</strong></a>(a, b)</dt><dd><tt>Tests&nbsp;whether&nbsp;value&nbsp;a&nbsp;is&nbsp;greater&nbsp;than&nbsp;value&nbsp;b.<br>
+This&nbsp;is&nbsp;the&nbsp;same&nbsp;as&nbsp;a&nbsp;&gt;&nbsp;b.<br>
+&nbsp;<br>
+Parameters<br>
+---------<br>
+a&nbsp;:&nbsp;Any&nbsp;object&nbsp;that&nbsp;can&nbsp;be&nbsp;compared&nbsp;to&nbsp;b.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;any&nbsp;type<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;value<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+b&nbsp;:&nbsp;Any&nbsp;object&nbsp;that&nbsp;can&nbsp;be&nbsp;compared&nbsp;to&nbsp;a.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;any&nbsp;type<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;value<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+Returns<br>
+---------<br>
+Type&nbsp;:&nbsp;boolean<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;True&nbsp;if&nbsp;a&nbsp;&gt;&nbsp;b,&nbsp;otherwise&nbsp;False.</tt></dd></dl>
+ <dl><dt><a name="-wait_for_seconds"><strong>wait_for_seconds</strong></a>(seconds)</dt><dd><tt>Waits&nbsp;for&nbsp;a&nbsp;specified&nbsp;number&nbsp;of&nbsp;seconds&nbsp;before&nbsp;continuing&nbsp;the&nbsp;program.<br>
+&nbsp;<br>
+Parameters<br>
+--------------<br>
+seconds&nbsp;:&nbsp;The&nbsp;time&nbsp;to&nbsp;wait&nbsp;in&nbsp;seconds.<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;float&nbsp;(decimal&nbsp;value)<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;any&nbsp;value<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+Errors<br>
+----------------<br>
+TypeError&nbsp;:&nbsp;seconds&nbsp;is&nbsp;not&nbsp;a&nbsp;number.<br>
+&nbsp;<br>
+ValueError&nbsp;:&nbsp;seconds&nbsp;is&nbsp;not&nbsp;at&nbsp;least&nbsp;0.</tt></dd></dl>
+ <dl><dt><a name="-wait_until"><strong>wait_until</strong></a>(get_value_function, operator_function, target_value<font color="#909090">=True</font>)</dt><dd><tt>Waits&nbsp;until&nbsp;the&nbsp;condition&nbsp;is&nbsp;True&nbsp;before&nbsp;continuing&nbsp;with&nbsp;the&nbsp;program.<br>
+&nbsp;<br>
+Parameters<br>
+--------------<br>
+get_value_function<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;callable&nbsp;function<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;A&nbsp;function&nbsp;that&nbsp;returns&nbsp;the&nbsp;current&nbsp;value&nbsp;to&nbsp;be&nbsp;compared&nbsp;to&nbsp;the&nbsp;target&nbsp;value.<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+operator_function<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;callable&nbsp;function<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;A&nbsp;function&nbsp;that&nbsp;compares&nbsp;two&nbsp;arguments.&nbsp;The&nbsp;first&nbsp;argument&nbsp;will&nbsp;be&nbsp;the&nbsp;result&nbsp;of&nbsp;get_value_function()&nbsp;and&nbsp;the&nbsp;second&nbsp;argument&nbsp;will&nbsp;be&nbsp;target_value.&nbsp;The&nbsp;function&nbsp;will&nbsp;compare&nbsp;these&nbsp;two&nbsp;values&nbsp;and&nbsp;return&nbsp;the&nbsp;result.<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+target_value<br>
+&nbsp;<br>
+Type&nbsp;:&nbsp;any&nbsp;type<br>
+&nbsp;<br>
+Values&nbsp;:&nbsp;Any&nbsp;object&nbsp;that&nbsp;can&nbsp;be&nbsp;compared&nbsp;by&nbsp;operator_function.<br>
+&nbsp;<br>
+Default&nbsp;:&nbsp;no&nbsp;default&nbsp;value<br>
+&nbsp;<br>
+Errors<br>
+----------------<br>
+TypeError&nbsp;:&nbsp;get_value_function&nbsp;or&nbsp;operator_function&nbsp;is&nbsp;not&nbsp;callable&nbsp;or&nbsp;operator_function&nbsp;does&nbsp;not&nbsp;compare&nbsp;two&nbsp;arguments.</tt></dd></dl>
+</td></tr></table>
+</body></html>

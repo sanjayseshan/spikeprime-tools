@@ -11,7 +11,7 @@ To install, just run install.bat etc. after downloading the whole repository.
 
 The default device address to communicate with the hub is `/dev/ttyACM0` and otherwise can be specified with `--tty` option. The port path can be discovered with `sudo python -m serial.tools.list_ports`.
 
-Access to serial ports usually needs a special privilige. To avoid running every command with `sudo`
+Access to serial ports usually needs a special privilege. To avoid running every command with `sudo`
 you can do the follwing in Linux (needs logout to become effective). 
 ```sh
 sudo adduser <user name> dialout

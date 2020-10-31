@@ -25,11 +25,11 @@ Linux this can be disbled with:
 sudo systemctl disable ModemManager
 ```
 
-## spikejsonrpc.py
+## spikejsonrpcapispike.py
 A module to communicate with the Spike Hub using JSON RPC. Can be used to manage program slots of the on brick selector.
 
 ```
-usage: spikejsonrpc.py [-h] [-t TTY] [--debug]
+usage: spikejsonrpcapispike.py [-h] [-t TTY] [--debug]
                        {list,ls,fwinfo,mv,upload,cp,rm,start,stop,display} ...
 
 Tools for Spike Hub RPC protocol

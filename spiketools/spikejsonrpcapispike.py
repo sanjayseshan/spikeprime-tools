@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+
 import serial
 import base64
 import os
-import sys
+# import sys
 import argparse
 from tqdm import tqdm
 import time
@@ -113,13 +114,26 @@ if __name__ == "__main__":
     info = rpc.get_storage_information()
     storage = info['storage']
     slots = info['slots']
-    print("%2s %-40s %6s %6s %20s" % ("#", "Name", "Size", "Id", "Last Modified"))
+    print("%4s %-40s %6s %-20s %-12s %-10s" % ("Slot", "Decoded Name", "Size",  "Last Modified", "Project_id", "Type"))
     for i in range(20):
       if str(i) in slots:
         sl = slots[str(i)]
         modified = datetime.utcfromtimestamp(sl['modified']/1000).strftime('%Y-%m-%d %H:%M:%S')
-        print("%2s %-40s %5db %6s %20s" % (i, sl['name'], sl['size'], sl['id'], modified))
-    print(("%s/%s%s Free" % (storage['free'], storage['total'], storage['unit'])).rjust(78))
+        try:
+          decoded_name = base64.b64decode(sl['name']).decode('utf-8')
+        except:
+          decoded_name = sl['name']
+        try:
+          project = sl['project_id']
+        except:
+          project = " "
+        try:
+          type = sl['type']
+        except:
+          type = " "
+        # print("%2s %-40s %-40s %5db %6s %-20s %-20s %-10s" % (i, sl['name'], decoded_name, sl['size'], sl['id'], modified, project, type))
+        print("%4s %-40s %5db %-20s %-12s %-10s" % (i, decoded_name, sl['size'], modified, project, type))
+    print(("Storage free %s%s of total %s%s" % (storage['free'], storage['unit'], storage['total'], storage['unit'])))
   def handle_fwinfo():
     info = rpc.get_firmware_info()
     fw = '.'.join(str(x) for x in info['version'])

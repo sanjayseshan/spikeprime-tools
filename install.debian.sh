@@ -9,8 +9,13 @@ fi
 # to here
 
 cp -prv spiketools/ ~/
-sudo apt-get install python3 python3-pip
+# FIXME: at least python 3.7 is required. 
+# However, this command will install an older python on certain systems
+# (e.g. Ubuntu 18.04)
+sudo apt-get install python3 python3-pip python3-venv
 sudo adduser $USER dialout
 cd ~/spiketools/
-sudo pip3 install -r requirements.txt
+python3 -m venv venv
+. venv/bin/activate
+pip3 install -r requirements.txt
 echo "All done!"

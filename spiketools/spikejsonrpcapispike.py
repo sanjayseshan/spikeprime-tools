@@ -131,8 +131,13 @@ if __name__ == "__main__":
           type = sl['type']
         except:
           type = " "
+        try:
+          size = sl['size']
+        except:
+          size = 0
+
         # print("%2s %-40s %-40s %5db %6s %-20s %-20s %-10s" % (i, sl['name'], decoded_name, sl['size'], sl['id'], modified, project, type))
-        print("%4s %-40s %5db %-20s %-12s %-10s" % (i, decoded_name, sl['size'], modified, project, type))
+        print("%4s %-40s %5db %-20s %-12s %-10s" % (i, decoded_name, size, modified, project, type))
     print(("Storage free %s%s of total %s%s" % (storage['free'], storage['unit'], storage['total'], storage['unit'])))
   def handle_fwinfo():
     info = rpc.get_firmware_info()

@@ -1919,6 +1919,7 @@ class PrimeHub:
     PORT_C = 'C'
     PORT_D = 'D'
     PORT_E = 'E'
+    PORT_F = 'F'
 
     def __init__(self):
         """
